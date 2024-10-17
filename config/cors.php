@@ -1,20 +1,20 @@
 <?php
-
 return [
 
-    'paths' => ['api/*', 'sanctum/csrf-cookie'],  // Mengizinkan akses ke rute API dan Sanctum jika digunakan
+    'paths' => ['api/*', 'sanctum/csrf-cookie'],
 
-    'allowed_methods' => ['*'],  // Mengizinkan semua metode HTTP
+    'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['http://localhost:*'],  // Mengizinkan semua port di localhost
+    'allowed_origins' => ['http://localhost:53325', 'http://localhost:8000'],  // Sesuaikan untuk pengembangan lokal
 
     'allowed_origins_patterns' => [],
 
-    'allowed_headers' => ['*'],  // Mengizinkan semua header
+    'allowed_headers' => ['*'],
 
     'exposed_headers' => [],
 
     'max_age' => 0,
 
-    'supports_credentials' => true,  // Mendukung cookie/credensial
+    'supports_credentials' => true,
+
 ];

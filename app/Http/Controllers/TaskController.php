@@ -18,13 +18,12 @@ class TaskController extends Controller
         $userTask = Task::where('from_system', false)->get();
 
         return response()->json([
-            'status' => 'succes',
+            'status' => 'success',
             'data' => [
                 'system_task' => $systemTask,
-                'user_task' => $userTask,  // Perbaikan dari 'uset_task'
+                'user_task' => $userTask,  
             ]
         ], 200);
-        
     }
 
     // Menambah tugas baru
@@ -55,13 +54,20 @@ class TaskController extends Controller
             'completed' => 'boolean',
         ]);
 
-        // Update hanya jika tugas bukan dari sistem
-        if(!$task->from_system) {
-            $task->update($validated);
-            return response()->json($task, 200);
-        } else {
-            return response()->json(['error' => 'Tugas dari sistem tidak bisa diubah'], 403);
+        // Jika tugas dari sistem, hanya bisa mengubah status completed
+        if ($task->from_system) {
+            // Hanya izinkan perubahan pada field 'completed'
+            if (isset($validated['completed'])) {
+                $task->update(['completed' => $validated['completed']]);
+                return response()->json($task, 200);
+            } else {
+                return response()->json(['error' => 'Hanya status completed yang bisa diubah untuk tugas dari sistem'], 403);
+            }
         }
+
+        // Jika tugas dari user, izinkan semua field diupdate
+        $task->update($validated);
+        return response()->json($task, 200);
     }
 
     // Menghapus tugas
