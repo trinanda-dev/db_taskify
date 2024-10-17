@@ -18,8 +18,11 @@ class TaskController extends Controller
         $userTask = Task::where('from_system', false)->get();
 
         return response()->json([
-            'system_task' => $systemTask,
-            'user_task' => $userTask,  // Perbaikan dari 'uset_task'
+            'status' => 'succes',
+            'data' => [
+                'system_task' => $systemTask,
+                'user_task' => $userTask,  // Perbaikan dari 'uset_task'
+            ]
         ], 200);
         
     }
