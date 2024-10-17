@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('date');
             $table->string('time');
             $table->boolean('completed')->default(false);
+            $table->boolean('from_system')->default(false); // Menambahkan kolom from_system
             $table->timestamps();
         });
     }
