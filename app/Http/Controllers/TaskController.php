@@ -48,10 +48,10 @@ class TaskController extends Controller
     public function update(Request $request, Task $task)
     {
         $validated = $request->validate([
-            'title' => 'string|max:255',
-            'date' => 'date',
-            'time' => 'date_format:H:i',
-            'completed' => 'boolean',
+            'title' => 'sometimes|string|max:255',
+            'date' => 'sometimes|date',
+            'time' => 'sometimes|date_format:H:i',
+            'completed' => 'sometimes|boolean',
         ]);
 
         // Jika tugas dari sistem, hanya bisa mengubah status completed
@@ -66,8 +66,12 @@ class TaskController extends Controller
         }
 
         // Jika tugas dari user, izinkan semua field diupdate
-        $task->update($validated);
-        return response()->json($task, 200);
+        if(!empty($validated)) {
+            $task->update($validated);
+            return response()->json($task, 200);
+        } else {
+            return response()->json(['error'=> 'Tidak ada data yang diubah'], 400);
+        }
     }
 
     // Menghapus tugas
