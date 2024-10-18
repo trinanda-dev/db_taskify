@@ -4,24 +4,32 @@ namespace App\Http\Controllers;
 
 use App\Models\Task;
 use Illuminate\Http\Request;
+use Carbon\Carbon; // Pastikan untuk mengimpor Carbon
 
 class TaskController extends Controller
 {
-    // Mendapatkan semua tugas
-    public function index()
+    // Mendapatkan semua tugas untuk hari ini
+    public function index() 
     {
-        // Memisahkan antara tugas sistem dan tugas user
-        // Mengambil tugas dari sistem
-        $systemTask = Task::where('from_system', true)->get();
+        // Mendapatkan tanggal hari ini
+        $today = Carbon::today()->format('Y-m-d');
 
-        // Mengambil tugas dari pengguna
-        $userTask = Task::where('from_system', false)->get();
+        // Mengambil tugas dari sistem dan user yang hanya untuk hari ini
+        $systemTask = Task::where('from_system', true)
+            ->whereDate('date', $today)
+            ->orderBy('completed', 'asc') // Tugas belum selesai dulu
+            ->get();
+
+        $userTask = Task::where('from_system', false)
+            ->whereDate('date', $today)
+            ->orderBy('completed', 'asc') // Tugas belum selesai dulu
+            ->get();
 
         return response()->json([
             'status' => 'success',
             'data' => [
                 'system_task' => $systemTask,
-                'user_task' => $userTask,  
+                'user_task' => $userTask,
             ]
         ], 200);
     }
@@ -66,11 +74,11 @@ class TaskController extends Controller
         }
 
         // Jika tugas dari user, izinkan semua field diupdate
-        if(!empty($validated)) {
+        if (!empty($validated)) {
             $task->update($validated);
             return response()->json($task, 200);
         } else {
-            return response()->json(['error'=> 'Tidak ada data yang diubah'], 400);
+            return response()->json(['error' => 'Tidak ada data yang diubah'], 400); // Perbaiki pesan error
         }
     }
 

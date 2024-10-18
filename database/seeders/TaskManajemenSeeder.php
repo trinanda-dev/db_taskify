@@ -114,7 +114,7 @@ class TaskManajemenSeeder extends Seeder
                 'from_system' => true,
             ],
             [
-                'title' => 'Followup balance kas, tugas harian, tugas pertanggal setiap bagian kerja dan pertanyaan yang belum selesai (senin-sabtu)',
+                'title' => 'Follow up balance kas, tugas harian, tugas pertanggal setiap bagian kerja dan pertanyaan yang belum selesai (senin-sabtu)',
                 'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
                 'time' => '08:00:00',
                 'completed' => false,
@@ -263,7 +263,7 @@ class TaskManajemenSeeder extends Seeder
                 'from_system' => true,
             ],
             [
-                'title' => 'Cf tf kas, kas masuk, kas keluar, serta kode perkiraan jangan sampai salah',
+                'title' => 'Cek tf kas, kas masuk, kas keluar, serta kode perkiraan jangan sampai salah',
                 'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
                 'time' => '08:00:00',
                 'completed' => false,
@@ -712,7 +712,7 @@ class TaskManajemenSeeder extends Seeder
                 'from_system' => true,
             ],
             [
-                'title' => 'Audit data bagian admin sale  (kontoorl pembayaran piutang online & offline)',
+                'title' => 'Audit data bagian admin sale  (kontrol pembayaran piutang online & offline)',
                 'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
                 'time' => '08:00:00',
                 'completed' => false,
