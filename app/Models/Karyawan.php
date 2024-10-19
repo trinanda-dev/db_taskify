@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Database\Eloquent\Model;
+use Laravel\Sanctum\HasApiTokens; // Tambahkan HasApiTokens untuk Sanctum
 
 class Karyawan extends Authenticatable
 {
-    use Notifiable; // Penulisan yang benar
+    use Notifiable, HasApiTokens; // Tambahkan HasApiTokens di sini
 
     protected $table = 'karyawans'; // Menentukan nama table secara eksplisit
     protected $primaryKey = 'id_karyawan'; // Menggunakan id_karyawan sebagai primary key
@@ -33,5 +33,11 @@ class Karyawan extends Authenticatable
     public function setPasswordAttribute($value)
     {
         $this->attributes['password'] = Hash::make($value);
+    }
+
+    // Relasi: Karyawan memiliki banyak tugas
+    public function tasks()
+    {
+        return $this->hasMany(Task::class, 'id_karyawan');
     }
 }
