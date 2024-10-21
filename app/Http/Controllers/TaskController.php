@@ -159,7 +159,7 @@ class TaskController extends Controller
 
 
 
-    // Mendapatkan data dashboard
+    // Mendapatkan data dashboard untuk admin aplikasi
     public function getDashboardData()
     {
         // Mengambil semua karyawan dari database
@@ -192,6 +192,30 @@ class TaskController extends Controller
         return response()->json([
             'status' => 'success',
             'data' => $dashboardData
+        ], 200);
+    }
+
+    // Mendapatkan data dashboard untuk karyawan per id
+    public function getDashboardKaryawanById($id) 
+    {
+        $karyawan = Karyawan::where('id_karyawan', $id)->first();
+
+        // Hitung tugas yang diselesaikan oleh karyawan ini
+        $completedTasks = TaskAssignment::where('id_karyawan', $id)
+                                    ->where('completed', true)
+                                    ->count();
+        
+        // Hitung tugas yang belum diselesaikan oleh karyawan ini
+        $incompleteTasks = TaskAssignment::where('id_karyawan', $id)
+                                    ->where('completed', false)
+                                    ->count();
+        
+        return response()->json([
+            'nama' => $karyawan->nama,
+            'role' => $karyawan->role,
+            'tugas_selesai' => $completedTasks,
+            'tugas_belum_selesai' => $incompleteTasks
+
         ], 200);
     }
 
