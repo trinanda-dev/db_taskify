@@ -10,6 +10,9 @@ class TaskAssignment extends Model
     use HasFactory;
 
     protected $fillable = ['task_id', 'id_karyawan', 'completed'];
+    protected $casts = [
+        'completed' => 'boolean'
+    ];
 
     // Relasi ke Task
     public function task()

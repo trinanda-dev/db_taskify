@@ -13,11 +13,14 @@ Route::middleware('auth:sanctum')->group(function () {
     // Tasks
     Route::get('/tasks', [TaskController::class, 'index']); // Mendapatkan semua tugas
     Route::post('/tasks', [TaskController::class, 'store']); // Menambah tugas baru
-    Route::put('/tasks/{task}', [TaskController::class, 'update']); // Update tugas
+    // Route::put('/tasks/{task}', [TaskController::class, 'update']); // Update tugas
     Route::delete('/tasks/{task}', [TaskController::class, 'destroy']); // Hapus tugas
 
     // Update status task dan kirimkan id_karyawan
     Route::put('/tasks/{task}/update-status', [TaskController::class, 'updateTaskStatus']);
+
+    // Get tasks yang sudah di update
+    Route::get('/tasks-updated', [TaskController::class, 'getUpdatedTasks']);
 
     // Get dashboard data berdasarkan ID karyawan
     Route::get('/karyawan/{id}/dashboard', [TaskController::class, 'getDashboardData']);
