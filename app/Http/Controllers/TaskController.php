@@ -160,26 +160,40 @@ class TaskController extends Controller
 
 
     // Mendapatkan data dashboard
-    public function getDashboardData($id)
+    public function getDashboardData()
     {
-        $karyawan = Karyawan::where('id_karyawan', $id)->first();
+        // Mengambil semua karyawan dari database
+        $karyawans = Karyawan::all();
 
-        // Hitung tugas yang selesai oleh karyawan ini
-        $completedTasks = TaskAssignment::where('id_karyawan', $id)
-                                        ->where('completed', true)
-                                        ->count();
+        // Array untuk menampung data dashboard dari semua karyawan
+        $dashboardData = [];
 
-        // Hitung tugas yang belum selesai oleh karyawan ini
-        $incompleteTasks = TaskAssignment::where('id_karyawan', $id)
-                                         ->where('completed', false)
-                                         ->count();
+        foreach ($karyawans as $karyawan) {
+            // Hitung tugas yang selesai oleh karyawan ini
+            $completedTasks = TaskAssignment::where('id_karyawan', $karyawan->id_karyawan)
+                                            ->where('completed', true)
+                                            ->count();
 
+            // Hitung tugas yang belum selesai oleh karyawan ini
+            $incompleteTasks = TaskAssignment::where('id_karyawan', $karyawan->id_karyawan)
+                                            ->where('completed', false)
+                                            ->count();
+
+            // Masukkan data karyawan ke array dashboardData
+            $dashboardData[] = [
+                'nama' => $karyawan->nama,
+                'role' => $karyawan->role,
+                'tugas_selesai' => $completedTasks,
+                'tugas_belum_selesai' => $incompleteTasks
+            ];
+        }
+
+        // Kembalikan respons dengan semua data karyawan
         return response()->json([
-            'nama' => $karyawan->nama,
-            'role' => $karyawan->role,
-            'tugas_selesai' => $completedTasks,
-            'tugas_belum_selesai' => $incompleteTasks
+            'status' => 'success',
+            'data' => $dashboardData
         ], 200);
     }
+
 
 }

@@ -23,5 +23,5 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/tasks-updated', [TaskController::class, 'getUpdatedTasks']);
 
     // Get dashboard data berdasarkan ID karyawan
-    Route::get('/karyawan/{id}/dashboard', [TaskController::class, 'getDashboardData']);
+    Route::get('/karyawan/dashboard', [TaskController::class, 'getDashboardData']);
 });
