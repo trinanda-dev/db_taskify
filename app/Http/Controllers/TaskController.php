@@ -19,11 +19,11 @@ class TaskController extends Controller
         // Mendapatkan tanggal hari ini
         $today = Carbon::today()->format('Y-m-d');
 
-        // Mengambil semua tugas yang terkait dengan role "Manajemen" dan untuk hari ini
-        $tasks = Task::where('role', 'Manajemen')
-                                ->whereDate('date', $today)
-                                ->get();
-        
+        // Mengambil semua tugas yang terkait dengan karyawan yang sedang login dari task_assignments
+        $tasks = Task::whereHas('taskAssignments', function($query) use ($karyawan) {
+            $query->where('id_karyawan', $karyawan->id_karyawan);
+        })->whereDate('date', $today)->get();
+
         // Pisahkan tugas berdasarkan sumber
         $systemTask = $tasks->where('from_system', true); // Tugas dari sistem
         $userTask = $tasks->where('from_system', false); // Tugas dari user
@@ -36,8 +36,19 @@ class TaskController extends Controller
                                         ->first();
 
             // Update status 'completed' berdasarkan assignment untuk karyawan ini
-            // Ini untuk memastikan status completed diambil dari task_assignment
-            $task->completed = $assignment ? $assignment->completed : true;
+            if (!$assignment) {
+                \Log::debug('Assignment tidak ditemukan untuk task ID ' . $task->id . ' dan karyawan ID ' . $karyawan->id_karyawan);
+
+                // Buat assignment baru jika tidak ada
+                TaskAssignment::create([
+                    'task_id' => $task->id,
+                    'id_karyawan' => $karyawan->id_karyawan,
+                    'completed' => false, // Default false
+                ]);
+            } else {
+                // Set nilai completed berdasarkan assignment
+                $task->completed = $assignment->completed;
+            }
         }
 
         // Kembalikan respons dengan struktur yang benar, meskipun tugas kosong
@@ -60,11 +71,22 @@ class TaskController extends Controller
             'completed' => 'boolean',
         ]);
 
+        // Mendapatkan karyawan yang sedang login
+        $karyawan = $request->user(); // Pastikan ini adalah karyawan yang benar
+
         // Set tugas dari sistem
         $validated['from_system'] = false;
         $validated['role'] = 'Manajemen'; // Atur role ke Manajemen
 
+        // Buat tugas baru
         $task = Task::create($validated);
+
+        // Buat entri di task_assignments untuk karyawan yang menambah tugas ini
+        TaskAssignment::create([
+            'task_id' => $task->id,
+            'id_karyawan' => $karyawan->id_karyawan,
+            'completed' => false // Set default completed ke false
+        ]);
 
         return response()->json($task, 201);
     }

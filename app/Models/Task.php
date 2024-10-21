@@ -9,18 +9,18 @@ class Task extends Model
 {
     use HasFactory;
 
-    // Field yang bisa diisi
-    protected $fillable = ['title', 'date', 'time', 'completed', 'from_system'];
+    protected $fillable = [
+        'title', 'date', 'time', 'completed', 'from_system', 'role'
+    ];
 
-    // Opsi tambahan casting otomatis untuk boolean
     protected $casts = [
         'completed' => 'boolean',
         'from_system' => 'boolean',
     ];
 
-    // Relasi ke model TaskAssignment
-    public function taskAssignment()
+    // Definisikan relasi ke TaskAssignment
+    public function taskAssignments()
     {
-        return $this->hasMany(TaskAssignment::class, 'task_id');
+        return $this->hasMany(TaskAssignment::class, 'task_id', 'id');
     }
 }

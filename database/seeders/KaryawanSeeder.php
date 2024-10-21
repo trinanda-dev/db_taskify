@@ -27,5 +27,12 @@ class KaryawanSeeder extends Seeder
             'role' => 'Manajemen',
             'password' => '123', //Password tidak di hashing
         ]);
+
+        Karyawan::create([
+            'id_karyawan' => '0000000002',
+            'nama' => 'Joko Wijaya',
+            'role' => 'Manajemen',
+            'password' => '123', //Password tidak di hashing
+        ]);
     }
 }
