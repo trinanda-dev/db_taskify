@@ -19,14 +19,10 @@ class RemoveIdKaryawanAddRoleToTasks extends Migration
                 $table->dropColumn('id_karyawan');
             }
 
-            // Menambahkan kolom role dengan nilai default 'Manajemen'
-            $table->string('role')->default('Manajemen');
+            // Menambahkan kolom role tanpa nilai default
+            $table->string('role')->nullable();
         });
-
-        // Jika ingin, isi semua tugas yang sudah ada dengan 'Manajemen' di kolom role
-        DB::table('tasks')->update(['role' => 'Manajemen']);
     }
-
 
     /**
      * Reverse the migrations.

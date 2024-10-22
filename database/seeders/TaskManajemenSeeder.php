@@ -21,6 +21,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Penyelesaian catatan pertanyaan setiap bagian kerja & kontrol buku masing-masing',
@@ -28,6 +29,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Kontrol tugas harian dan pertanggal setiap bagian',
@@ -35,6 +37,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Cek penyelesaian tugas pribadi belum selesai hari-har- sebelumnya',
@@ -42,6 +45,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Penyelesaian catatan pertanyaan setiap bagian kerja & kontrol buku masing-masing',
@@ -49,6 +53,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Cek stok error',
@@ -56,6 +61,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Kirim lamaran masuk ke atasan (setiap kali ada chat masuk)',
@@ -63,6 +69,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Follow up stock minus / bermasalah',
@@ -70,6 +77,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Kontrol centang tugas perhari dan semua tugas yang sudah selesai',
@@ -77,6 +85,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Jika tidak selesai (lebih dari 3 hari) pindahkan ke halaman berikutnya',
@@ -84,6 +93,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Absesi izin jam siang',
@@ -91,6 +101,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Penyelesaian kendala / permasalahan orang kerja / sistem',
@@ -98,6 +109,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Wajib dicatat setiap penyampaian baik tugas maupun bukan',
@@ -105,6 +117,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Konsultasi dengan atasan bila ada kendala atau apa yang belum terselesaikan & dan follow up tugas yang tidak terselesaikan ke atasan (pagi, siang, sore)',
@@ -112,6 +125,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Follow up balance kas, tugas harian, tugas pertanggal setiap bagian kerja dan pertanyaan yang belum selesai (senin-sabtu)',
@@ -119,6 +133,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Input barang masuk dan barang keluar yang sudah di tanda tangani boss',
@@ -126,6 +141,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Kontrol barang masuk dan barang keluar',
@@ -133,6 +149,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Cek tf kas, kas masuk, dan kas keluarm serta kode perkiraan jangan sampai salah',
@@ -140,6 +157,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Kontrol semua laporan, tidak boleh ada yang tidak isi',
@@ -147,6 +165,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
 
             // Tugas untuk hari selasa
@@ -156,6 +175,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Kontrol tugas harian dan pertanggal setiap bagian kerja ( kontrol buku tugas harian )',
@@ -163,6 +183,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Audit stok',
@@ -170,6 +191,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Cek tugas belum selesai, hari-hari sebelumnya (pagi-sore)',
@@ -177,6 +199,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Audit data bagian admin sale',
@@ -184,6 +207,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Check stock error',
@@ -191,6 +215,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Kirim lamaran masuk ke atasan (setiap kali ada chat masuk)',
@@ -198,6 +223,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Follow up stock minus / bermasalah',
@@ -205,6 +231,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Stock eror paket, follow up kak sheily',
@@ -212,6 +239,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Centang buku satu persatu tugas yang sudah selesai dikerjakan (semua bagian kerja)',
@@ -219,6 +247,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Centang keseluruhan tugas kerja yang sudah selesai dikerjakan (semua bagian kerja jika sudah 3 hari pindah ke depan)',
@@ -226,6 +255,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Follow up balance kas, tugas harian, tugas pertanggal setiap bagian dan pertanyaan yang belum seleesai',
@@ -233,6 +263,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Wajib dicatat setiap penyampaian tugas maupun bukan',
@@ -240,6 +271,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Konsultasi dengan atasan bila ada kendala atau apa yang belum terselesaikan & follow-up tugas yang tidak terselesaikan ke atasan (pagi, siang, sore)',
@@ -247,6 +279,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Input barang masuk dan keluar yang sudah ditanda tangani boss',
@@ -254,6 +287,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Kontrol barang masuk dan barang keluar',
@@ -261,6 +295,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Cek tf kas, kas masuk, kas keluar, serta kode perkiraan jangan sampai salah',
@@ -268,6 +303,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Kontrol semua laporan tidak boleh ada yang tidak di isi',
@@ -275,6 +311,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
 
             // Tugas untuk hari rabu
@@ -284,6 +321,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Kontrol tugas harian dan pertanggal setiap bagian kerja (kontrol buku harian tugas)',
@@ -291,6 +329,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Audit stok',
@@ -298,6 +337,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Cek tugas belum selesai, hari-hari sebelumnya (pagi-sore)',
@@ -305,6 +345,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Audit data bagian admin sale',
@@ -312,6 +353,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Check stock eror di komputer',
@@ -319,6 +361,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Kirim lamaran masuk ke atasn (setiap kali ada chat masuk)',
@@ -326,6 +369,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Follow up stock minus / bermasalah',
@@ -333,6 +377,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Stock error paket, follow up kak shelly',
@@ -340,6 +385,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Centang buku satu persatu tugas yang sudah selesai dikerjakan (semua bagian kerja)',
@@ -347,6 +393,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Centang keseluruhan tugas kerja yang sudah selesai dikerjakan (semua bagian kerja sudah 3 hari pindah kedepan)',
@@ -354,6 +401,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Follow up balance kas, tugas harian, tugas pertanggal setiap bagian dan pertanyaan yang belum selesai',
@@ -361,6 +409,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Wajib dicatat setiap setiap penyampaian tugas maupun bukan',
@@ -368,6 +417,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Konsultasi dengan atasan bila ada kendala atau apa yang belum terselesaikan & follow up tugas yang tidak terselesaikan ke atasan(pagi, siang, sore)',
@@ -375,6 +425,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Input barang masuk dan barang keluar yang sudah di tandatangani boss',
@@ -382,6 +433,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Kontrol barang masuk dan barang keluar',
@@ -389,6 +441,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Cek tf kas, kas masuk, kas keluar, serta kode perkiraan jangan sampai salah',
@@ -396,6 +449,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Kontrol semua laporan tidak boleh ada yang tidak di isi',
@@ -403,6 +457,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
 
             // Tugas untuk hari kamis
@@ -412,6 +467,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Kontrol tugas harian dan pertanggal setiap bagian kerja (kontrol buku tugas harian)',
@@ -419,6 +475,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Audit stok',
@@ -426,6 +483,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Cek tugas belum selesai, hari-hari sebelumnya (pagi-sore)',
@@ -433,6 +491,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Audit data bagian admin sale',
@@ -440,6 +499,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Cek stok error',
@@ -447,6 +507,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Kirim lamaran masuk ke atasan (setiap kali ada chat masuk)',
@@ -454,6 +515,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Follow up stock minus / bermasalah',
@@ -461,6 +523,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Stock error paket, follow up kak shelly',
@@ -468,6 +531,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Centang buku satu persatu tugas yang sudah selesai dikerjakan (semua bagian kerja)',
@@ -475,6 +539,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Jika tidak selesai (lebih dari 3 hari) pindahkan ke halaman berikutnya',
@@ -482,6 +547,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Absesi izin jam siang',
@@ -489,6 +555,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Penyelesaian kendala / permasalahan orang kerja / sistem',
@@ -496,6 +563,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Wajib dicatat setiap penyampaian baik tugas maupun bukan',
@@ -503,6 +571,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Konsultasi dengan atasan bila ada kendala atau apa yang belum terselesaikan & dan follow up tugas yang tidak terselesaikan ke atasan (pagi, siang, sore)',
@@ -510,6 +579,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Followup balance kas, tugas harian, tugas pertanggal setiap bagian kerja dan pertanyaan yang belum selesai (senin-sabtu)',
@@ -517,6 +587,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Input barang masuk dan barang keluar yang sudah di tanda tangani boss',
@@ -524,6 +595,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Kontrol barang masuk dan barang keluar',
@@ -531,6 +603,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Cek tf kas, kas masuk, dan kas keluarm serta kode perkiraan jangan sampai salah',
@@ -538,6 +611,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Kontrol semua laporan, tidak boleh ada yang tidak isi',
@@ -545,6 +619,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
 
             // Tugas untuk hari jumat
@@ -554,6 +629,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Kontrol tugas harian dan pertanggal setiap bagian kerja (kontrol buku tugas harian)',
@@ -561,6 +637,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Audit stok',
@@ -568,6 +645,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Cek tugas belum selesai, hari-hari sebelumnya (pagi-sore)',
@@ -575,6 +653,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Audit data bagian admin sale',
@@ -582,6 +661,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Check stock error',
@@ -589,6 +669,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Kirim lamaran masuk ke atasan (setiap kali ada chat masuk)',
@@ -596,6 +677,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Follow up stock minus / bermasalah',
@@ -603,6 +685,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Stock error paket, follow up kak sheily',
@@ -610,6 +693,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Centang buku satu persatu tuga yang sudah selesai dikerjakan (semua bagian kerja)',
@@ -617,6 +701,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Centang keseluruhan tugas kerja yang sudah selesai dikerjakan (semua bagian kerja jika sudah 3 hari pindah ke depan)',
@@ -624,6 +709,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Follow up balance kas, tugas harian, tugas pertanggal setiap bagian dan pertanyaan yang belum selesai',
@@ -631,6 +717,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Wajib dicatat setiap penyampaian tugas maupun bukan',
@@ -638,6 +725,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Konsultasi dengan atasan bila ada kendala atau apa yang belum terselesaika & follow up tugas yang tidak terselesaikan ke atasan (pagi, siang, sore)',
@@ -645,6 +733,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Input barang masuk dan barang keluar yang sudah ditanda tangani boss',
@@ -652,6 +741,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Kontrol barang masuk dan barang keluar',
@@ -659,6 +749,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Cek tf kas, kas masuk, kas keluar, serta kode perkiraan jangan sampai salah',
@@ -666,6 +757,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Cek kode perkiraan',
@@ -673,6 +765,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Kontrol semua laporan tidak boleh ada yang tidak diisi',
@@ -680,6 +773,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
 
             // Tugas untuk hari sabtu
@@ -689,6 +783,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Kontrol tugas harian dan pertanggal setiap bagian kerja (kontrol buku tugas harian)',
@@ -696,6 +791,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Audit stok',
@@ -703,6 +799,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Cek tugas belum selesai, hari-hari sebelumnya (pagi-sore)',
@@ -710,6 +807,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Audit data bagian admin sale  (kontrol pembayaran piutang online & offline)',
@@ -717,6 +815,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Check stock error',
@@ -724,6 +823,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Kirim lamaran masuk ke atasan (setiap kali ada chat masuk)',
@@ -731,6 +831,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Follow up stock minus / bermasalah',
@@ -738,6 +839,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Stock error paket, follow up kak sheily',
@@ -745,6 +847,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Centang buku satu persatu tuga yang sudah selesai dikerjakan (semua bagian kerja)',
@@ -752,6 +855,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Centang keseluruhan tugas kerja yang sudah selesai dikerjakan (semua bagian kerja jika sudah 3 hari pindah ke depan)',
@@ -759,6 +863,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Follow up balance kas, tugas harian, tugas pertanggal setiap bagian dan pertanyaan yang belum selesai',
@@ -766,6 +871,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Wajib dicatat setiap penyampaian tugas maupun bukan',
@@ -773,6 +879,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Konsultasi dengan atasan bila ada kendala atau apa yang belum terselesaika & follow up tugas yang tidak terselesaikan ke atasan (pagi, siang, sore)',
@@ -780,6 +887,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Input barang masuk dan barang keluar yang sudah ditanda tangani boss',
@@ -787,6 +895,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Kontrol barang masuk dan barang keluar',
@@ -794,6 +903,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Cek tf kas, kas masuk, kas keluar, serta kode perkiraan jangan sampai salah',
@@ -801,6 +911,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Cek kode perkiraan',
@@ -808,6 +919,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
             [
                 'title' => 'Kontrol semua laporan tidak boleh ada yang tidak diisi',
@@ -815,6 +927,7 @@ class TaskManajemenSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Manajemen',
             ],
         ];
 

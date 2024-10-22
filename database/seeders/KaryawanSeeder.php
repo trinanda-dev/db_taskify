@@ -21,17 +21,32 @@ class KaryawanSeeder extends Seeder
             'password' => '123', //Password tidak di hashing
         ]);
 
+
         Karyawan::create([
-            'id_karyawan' => '1',
-            'nama' => 'Joko Wijaya',
+            'id_karyawan' => '0000000002',
+            'nama' => 'JokoPra',
             'role' => 'Manajemen',
             'password' => '123', //Password tidak di hashing
         ]);
 
         Karyawan::create([
-            'id_karyawan' => '0000000002',
-            'nama' => 'Joko Wijaya',
-            'role' => 'Manajemen',
+            'id_karyawan' => '0000000003',
+            'nama' => 'ProJo',
+            'role' => 'Admin Marketing',
+            'password' => '123', //Password tidak di hashing
+        ]);
+
+        Karyawan::create([
+            'id_karyawan' => '0000000004',
+            'nama' => 'Ganjar Baswedan',
+            'role' => 'Admin Marketing',
+            'password' => '123', //Password tidak di hashing
+        ]);
+
+        Karyawan::create([
+            'id_karyawan' => '0000000005',
+            'nama' => 'Anis Rakabuming',
+            'role' => 'Admin Sale',
             'password' => '123', //Password tidak di hashing
         ]);
     }

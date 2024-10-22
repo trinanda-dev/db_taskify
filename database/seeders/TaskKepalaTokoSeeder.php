@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class TaskKepalaTokoSeeder extends Seeder
 {
@@ -20,6 +22,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Kontrol tugas harian & pertanggal setiap toko',
@@ -27,6 +30,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Penyelesaian tugas pertanyaan / lainnya belum selesai hari-hari sebelumnya (pagi-sore) dan wajib di catat setiap penyampaian tugas maupun bukan',
@@ -34,6 +38,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Kontrol tugas harian setiap toko',
@@ -41,6 +46,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Follow up barang kosong / barang baru ke pembelian',
@@ -48,6 +54,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Meeting dengan manajer (estimasi senin pagi)',
@@ -55,6 +62,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Kontrol ekspor dan impor data toko (sebelum jam 08:00)',
@@ -62,6 +70,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Fokuskan penjulan ke benih yang hampir mencapai expired',
@@ -69,6 +78,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Mencari konsumen baru',
@@ -76,6 +86,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Konsultasi dengan atasan bila ada kendala / lainnya yang belum terselesaikan dan follow up tugas yang tidak terselesaikan ke atasan',
@@ -83,6 +94,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Kontrol tugas data konsumen di toko / kebun setiap sore',
@@ -90,6 +102,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Kontrol stok toko',
@@ -97,6 +110,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Kontrol online via wa',
@@ -104,6 +118,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Cek yang harus di follow up dibuku / yang belum ada penyelesaian & wajib di catat  setiap penyampain tugas maupun bukan',
@@ -111,6 +126,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Kontrol cctv',
@@ -118,6 +134,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
 
             // Tugas hari Selasa
@@ -127,6 +144,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Kontrol tugas harian & pertanggal setiap toko',
@@ -134,6 +152,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Penyelesaian tugas pertanyaan / lainnya belum selesai hari-hari sebelumnya (pagi-sore) dan wajib di catat setiap penyampaian tugas maupun bukan',
@@ -141,6 +160,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Kontrol tugas harian setiap toko',
@@ -148,6 +168,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Follow up barang kosong / barang baru ke pembelian',
@@ -155,6 +176,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Meeting dengan manajer (estimasi senin pagi)',
@@ -162,6 +184,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Kontrol ekspor dan impor data toko (sebelum jam 08:00)',
@@ -169,6 +192,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Fokuskan penjulan ke benih yang hampir mencapai expired',
@@ -176,6 +200,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Mencari konsumen baru',
@@ -183,6 +208,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Konsultasi dengan atasan bila ada kendala / lainnya yang belum terselesaikan dan follow up tugas yang tidak terselesaikan ke atasan',
@@ -190,6 +216,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Kontrol toko (setiap selasa)',
@@ -197,6 +224,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Perhatikan produk yang layak & tidak layak dijual',
@@ -204,6 +232,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Benih exp (setiap 6-8 bulan) konfirmasi gudang',
@@ -211,6 +240,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Setiap hari selasa turun toko cek benih exp yang 6-8 bulan tukar ke gudang konfirmasi dengan Bang Ali, antar kembali benih tiap kamis, titip ke zul',
@@ -218,6 +248,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Kontrol stok toko',
@@ -225,6 +256,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Bawa uang pecahan untuk di toko-toko',
@@ -232,6 +264,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Kontrol online (via wa)',
@@ -239,6 +272,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Kontrol offline (turun langsung ke toko-toko)',
@@ -246,6 +280,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Control cctv',
@@ -253,6 +288,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
 
             // Tugas hari Rabu
@@ -262,6 +298,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Kontrol tugas harian & pertanggal setiap toko',
@@ -269,6 +306,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Penyelesaian tugas pertanyaan / lainnya belum selesai hari-hari sebelumnya (pagi-sore) dan wajib di catat setiap penyampaian tugas maupun bukan',
@@ -276,6 +314,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Kontrol tugas harian setiap toko',
@@ -283,6 +322,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Follow up barang kosong / barang baru ke pembelian',
@@ -290,6 +330,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Meeting dengan manajer (estimasi senin pagi)',
@@ -297,6 +338,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Kontrol ekspor dan impor data toko (sebelum jam 08:00)',
@@ -304,6 +346,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Fokuskan penjulan ke benih yang hampir mencapai expired',
@@ -311,6 +354,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Mencari konsumen baru',
@@ -318,6 +362,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Konsultasi dengan atasan bila ada kendala / lainnya yang belum terselesaikan dan follow up tugas yang tidak terselesaikan ke atasan',
@@ -325,6 +370,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Kontrol stok toko',
@@ -332,6 +378,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Kontrol online (via wa)',
@@ -339,6 +386,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Control cctv',
@@ -346,6 +394,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
 
             // Tugas hari Kamis
@@ -355,6 +404,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Penyelesaian complain & saran',
@@ -362,6 +412,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Kontrol tugas harian & pertanggal setiap toko',
@@ -369,6 +420,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Penyelesaian tugas pertanyaan / lainnya belum selesai hari-hari sebelumnya (pagi-sore) dan wajib di catat setiap penyampaian tugas maupun bukan',
@@ -376,6 +428,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Kontrol tugas harian setiap toko',
@@ -383,6 +436,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Follow up barang kosong / barang baru ke pembelian',
@@ -390,6 +444,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Meeting dengan manajer (estimasi senin pagi)',
@@ -397,6 +452,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Kontrol ekspor dan impor data toko (sebelum jam 08:00)',
@@ -404,6 +460,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Fokuskan penjulan ke benih yang hampir mencapai expired',
@@ -411,6 +468,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Mencari konsumen baru',
@@ -418,6 +476,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Konsultasi dengan atasan bila ada kendala / lainnya yang belum terselesaikan dan follow up tugas yang tidak terselesaikan ke atasan',
@@ -425,6 +484,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Kontrol stok toko',
@@ -432,6 +492,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Kontrol online (via wa)',
@@ -439,6 +500,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Cek yang harus di follow up di buku / yang belum ada penyelesaian & wajib di catat setiap penyampaian tugas maupun bukan',
@@ -446,6 +508,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Control cctv',
@@ -453,6 +516,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
 
             // Tugas hari Jumat
@@ -462,6 +526,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Kontrol tugas harian & pertanggal setiap toko',
@@ -469,6 +534,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Penyelesaian tugas pertanyaan / lainnya belum selesai hari-hari sebelumnya (pagi-sore) dan wajib di catat setiap penyampaian tugas maupun bukan',
@@ -476,6 +542,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Kontrol tugas harian setiap toko',
@@ -483,6 +550,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Follow up barang kosong / barang baru ke pembelian',
@@ -490,6 +558,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Kontrol ekspor dan impor data toko (sebelum jam 08:00)',
@@ -497,6 +566,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Fokuskan penjulan ke benih yang hampir mencapai expired',
@@ -504,6 +574,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Mencari konsumen baru',
@@ -511,6 +582,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Konsultasi dengan atasan bila ada kendala / lainnya yang belum terselesaikan dan follow up tugas yang tidak terselesaikan ke atasan',
@@ -518,6 +590,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Kontrol stok toko',
@@ -525,6 +598,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Kontrol online (via wa)',
@@ -532,6 +606,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
 
             // Tugas hari Sabtu
@@ -541,6 +616,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Kontrol tugas harian & pertanggal setiap toko',
@@ -548,6 +624,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Penyelesaian tugas pertanyaan / lainnya belum selesai hari-hari sebelumnya (pagi-sore) dan wajib di catat setiap penyampaian tugas maupun bukan',
@@ -555,6 +632,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Kontrol tugas harian setiap toko',
@@ -562,6 +640,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Follow up barang kosong / barang baru ke pembelian',
@@ -569,6 +648,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Kontrol ekspor dan impor data toko (sebelum jam 08:00)',
@@ -576,6 +656,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Fokuskan penjulan ke benih yang hampir mencapai expired',
@@ -583,6 +664,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Mencari konsumen baru',
@@ -590,6 +672,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Konsultasi dengan atasan bila ada kendala / lainnya yang belum terselesaikan dan follow up tugas yang tidak terselesaikan ke atasan',
@@ -597,6 +680,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Kontrol stok toko',
@@ -604,6 +688,7 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
             [
                 'title' => 'Kontrol online (via wa)',
@@ -611,7 +696,11 @@ class TaskKepalaTokoSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role'  => 'Kepala Toko',
             ],
         ];
+
+        // Insert the tasks into the database
+        DB::table('tasks')->insert($taskkepalatoko);
     }
 }

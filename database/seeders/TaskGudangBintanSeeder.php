@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class TaskGudangBintanSeeder extends Seeder
 {
@@ -20,6 +22,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Produksi atau pengemasan barang',
@@ -27,6 +30,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Mempersiapkan barang orderan',
@@ -34,6 +38,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Cek tugas (pertanggal)',
@@ -41,6 +46,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Follow up jadwal kapal',
@@ -48,6 +54,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Kunci Gudang (sore)',
@@ -55,6 +62,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Kebersihan dan kerapian gudang',
@@ -62,6 +70,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Cek barang sampai pulau (kapan sampai)',
@@ -69,6 +78,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Cek keadaan kendaraan motor-pickup-lori-engkel-froklip radiator & oli (takutnya berkurang)',
@@ -76,6 +86,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Cuci bak / kendaraan saat selesai antar barang (jika kotor)',
@@ -83,6 +94,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Tulis koli di surat jalan & kemasaan packing (dibuat nama pelanggannya)',
@@ -90,6 +102,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Cek yang harus di follow up dibuku / yg belum ada penyelesaian & wajib dicatat setiap penyampaian tugas maupun bukan',
@@ -97,6 +110,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Konsultasi dengan atasan bila ada kendala apa yang belum terselesaikan & follow up tugas yang tidak terselesaikan ke atasan (pagi-siang-sore)',
@@ -104,6 +118,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
 
             // Tugas hari selasa
@@ -113,6 +128,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Produksi atau pengemasan barang',
@@ -120,6 +136,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Mempersiapkan barang orderan',
@@ -127,6 +144,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Cek tugas (pertanggal)',
@@ -134,6 +152,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Follow up jadwal kapal',
@@ -141,6 +160,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Kunci Gudang (sore)',
@@ -148,6 +168,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Kebersihan dan kerapian gudang',
@@ -155,6 +176,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Cek barang sampai pulau (kapan sampai)',
@@ -162,6 +184,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Cek keadaan kendaraan motor-pickup-lori-engkel-froklip radiator & oli (takutnya berkurang)',
@@ -169,6 +192,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Tulis koli di surat jalan & kemasaan packing (dibuat nama pelanggannya)',
@@ -176,6 +200,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Cek yang harus di follow up dibuku / yg belum ada penyelesaian & wajib dicatat setiap penyampaian tugas maupun bukan',
@@ -183,6 +208,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Konsultasi dengan atasan bila ada kendala apa yang belum terselesaikan & follow up tugas yang tidak terselesaikan ke atasan (pagi-siang-sore)',
@@ -190,6 +216,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
 
             // Tugas hari Rabu
@@ -199,6 +226,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Produksi atau pengemasan barang',
@@ -206,6 +234,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Mempersiapkan barang orderan',
@@ -213,6 +242,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Cek tugas (pertanggal)',
@@ -220,6 +250,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Follow up jadwal kapal',
@@ -227,6 +258,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Kunci Gudang (sore)',
@@ -234,6 +266,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Kebersihan dan kerapian gudang',
@@ -241,6 +274,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Cek barang sampai pulau (kapan sampai)',
@@ -248,6 +282,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Cek keadaan kendaraan motor-pickup-lori-engkel-froklip radiator & oli (takutnya berkurang)',
@@ -255,6 +290,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Tulis koli di surat jalan & kemasaan packing (dibuat nama pelanggannya)',
@@ -262,6 +298,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Cek yang harus di follow up dibuku / yg belum ada penyelesaian & wajib dicatat setiap penyampaian tugas maupun bukan',
@@ -269,6 +306,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Konsultasi dengan atasan bila ada kendala apa yang belum terselesaikan & follow up tugas yang tidak terselesaikan ke atasan (pagi-siang-sore)',
@@ -276,6 +314,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
 
             // Tugas hari Kamis
@@ -285,6 +324,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Produksi atau pengemasan barang',
@@ -292,6 +332,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Mempersiapkan barang orderan',
@@ -299,6 +340,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Cek tugas (pertanggal)',
@@ -306,6 +348,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Follow up jadwal kapal',
@@ -313,6 +356,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Kunci Gudang (sore)',
@@ -320,6 +364,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Kebersihan dan kerapian gudang',
@@ -327,6 +372,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Cek barang sampai pulau (kapan sampai)',
@@ -334,6 +380,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Cek keadaan kendaraan motor-pickup-lori-engkel-froklip radiator & oli (takutnya berkurang)',
@@ -341,6 +388,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Tulis koli di surat jalan & kemasaan packing (dibuat nama pelanggannya)',
@@ -348,6 +396,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Cek yang harus di follow up dibuku / yg belum ada penyelesaian & wajib dicatat setiap penyampaian tugas maupun bukan',
@@ -355,6 +404,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Konsultasi dengan atasan bila ada kendala apa yang belum terselesaikan & follow up tugas yang tidak terselesaikan ke atasan (pagi-siang-sore)',
@@ -362,6 +412,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
 
             // Tugas hari jumat
@@ -371,6 +422,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Produksi atau pengemasan barang',
@@ -378,6 +430,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Mempersiapkan barang orderan',
@@ -385,6 +438,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Cek tugas (pertanggal)',
@@ -392,6 +446,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Follow up jadwal kapal',
@@ -399,6 +454,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Kunci Gudang (sore)',
@@ -406,6 +462,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Kebersihan dan kerapian gudang',
@@ -413,6 +470,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Cek barang sampai pulau (kapan sampai)',
@@ -420,6 +478,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Cek keadaan kendaraan motor-pickup-lori-engkel-froklip radiator & oli (takutnya berkurang)',
@@ -427,6 +486,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Tulis koli di surat jalan & kemasaan packing (dibuat nama pelanggannya)',
@@ -434,6 +494,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Cek yang harus di follow up dibuku / yg belum ada penyelesaian & wajib dicatat setiap penyampaian tugas maupun bukan',
@@ -441,6 +502,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Konsultasi dengan atasan bila ada kendala apa yang belum terselesaikan & follow up tugas yang tidak terselesaikan ke atasan (pagi-siang-sore)',
@@ -448,6 +510,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
 
             // Tugas hari sabtu
@@ -457,6 +520,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Produksi atau pengemasan barang',
@@ -464,6 +528,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Mempersiapkan barang orderan',
@@ -471,6 +536,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Cek tugas (pertanggal)',
@@ -478,6 +544,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Follow up jadwal kapal',
@@ -485,6 +552,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Kunci Gudang (sore)',
@@ -492,6 +560,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Kebersihan dan kerapian gudang',
@@ -499,6 +568,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Cek barang sampai pulau (kapan sampai)',
@@ -506,6 +576,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Cek keadaan kendaraan motor-pickup-lori-engkel-froklip radiator & oli (takutnya berkurang)',
@@ -513,6 +584,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Tulis koli di surat jalan & kemasaan packing (dibuat nama pelanggannya)',
@@ -520,6 +592,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Cek yang harus di follow up dibuku / yg belum ada penyelesaian & wajib dicatat setiap penyampaian tugas maupun bukan',
@@ -527,6 +600,7 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
             [
                 'title' => 'Konsultasi dengan atasan bila ada kendala apa yang belum terselesaikan & follow up tugas yang tidak terselesaikan ke atasan (pagi-siang-sore)',
@@ -534,7 +608,11 @@ class TaskGudangBintanSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Gudang Bintan',
             ],
         ];
+
+        // Insert the tasks into the database
+        DB::table('tasks')->insert($taskgudangbintan);
     }
 }

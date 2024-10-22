@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class TaskAdminSaleSeeders extends Seeder
 {
@@ -20,6 +22,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Penyelesaian pencatatan yang belum selesai siang dan sore, wajib dicatat setiap penyampaian tugas maupun bukan',
@@ -27,6 +30,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Konsultasi dengan atasan bila ada kendala atau apa yang belum terselesaikan & follow up tugas yang tidak terselesaikan ke atasan, (pagi, siang, sore)',
@@ -34,6 +38,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek piutang yang harus ditagih (jatuh tempo)',
@@ -41,6 +46,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Foto nota piutang (tagihan via online)',
@@ -48,6 +54,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Pisahkan nota  < 5 hari jatuh tempo',
@@ -55,6 +62,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Penagihan piutang dan kontrol',
@@ -62,6 +70,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek olshop yang mau terbatalkan / tidak terproses siang & sore',
@@ -69,6 +78,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Penyelesaian piutang olshop bermasalah dan lebih dari 2 minggu & piutang offline lewat masa tenggang',
@@ -76,6 +86,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Shopee, Tokopedia, Lazada dilaporkan ke atasan jika ada kendala (pengembalian)',
@@ -83,6 +94,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek pengembalian Shopee, Lazada, Tokopedia yang baru & dalam proses',
@@ -90,6 +102,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Konfirmasi via telp jika ada perubahan nama item untuk Gudang Jakarta dan Bintan',
@@ -97,6 +110,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Penutupan buku (penerimaan piutang)',
@@ -104,6 +118,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Input nota, info barang kosong, persiapan nota invoice pengantaran',
@@ -111,6 +126,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Nota marketplace dikirim kurang lebih jam 11.00',
@@ -118,6 +134,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Buat nota / invoice antar cabang (penjualan)',
@@ -125,6 +142,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Untuk admin penjualan SO penjualan di selesaikan di hari ini juga, jika terdapat kendala konfirmasi ke atasan',
@@ -132,6 +150,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Setiap data wajib email (arsip)',
@@ -139,6 +158,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Input piutang',
@@ -146,6 +166,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek piutang, sesuaikan fisik invoice piutang dengan komputer',
@@ -153,6 +174,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek & selesaikan min-max pesaan Shopee, Lazada, Tokopedia, jika terdapat kendala lakukan konfirmasi ke atasan (piutang marketplace)',
@@ -160,6 +182,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Metting ke MGR piutang tidak selesai / bermasalah (senin pagi) perminggu',
@@ -167,6 +190,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek nota yang sudah di print hari ini, cek saat nota sudah selesai sore/pagi',
@@ -174,6 +198,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Print email masuk hari sebelumnya',
@@ -181,6 +206,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Nota retur marketplace / pengembalian / pembatalan',
@@ -188,6 +214,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Surat jalan offline dan online',
@@ -195,6 +222,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Hapus barang kosong, baran pengembalian online setiap hari (retur)',
@@ -202,6 +230,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Setiap permasalahan pengiriman, wajib diinfokan secara tertulis (gudang Jakarta)',
@@ -209,6 +238,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Input nota retur offline (cek diskon sebelumnya, input no inv & keterangan retur)',
@@ -216,6 +246,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Setiap akan membuka nota retur, harus dengan ACC & ditandatangani oleh atasan (hapus nota salah input, edit salah order dll)',
@@ -223,6 +254,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Import penjualan marketplace ke GF Akuntansi wajib diselesaikan setiap hari',
@@ -230,6 +262,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Setor ke bank Senin-Jumat',
@@ -237,6 +270,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Input pembayaran hutang',
@@ -244,6 +278,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Laporan balance kas',
@@ -251,6 +286,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Untuk kebun sendiri harus ttd di surat jalan kak axia / bang aming',
@@ -258,6 +294,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Biaya untuk iklan Shopee tidak boleh lebih dari 10%, jika lebih kabari langsung ke atasan',
@@ -265,6 +302,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Pengembalian maksimal 20.000, Acc boss pengembalian dana saja tidak perlu pengembalian barang',
@@ -272,6 +310,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek pekerjaan admin Faraco, Bintan & Gudang',
@@ -279,6 +318,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Pindah gudang Batam setiap hari Selasa & Jumat, kecuali urgent',
@@ -286,6 +326,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Jika ada yang TF kurang dari 20.000 dibuat saja diskon Acc Boss 12/06/24',
@@ -293,6 +334,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             
 
@@ -303,6 +345,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Penyelesaian pencatatan yang belum selesai siang dan sore, wajib dicatat setiap penyampaian tugas maupun bukan',
@@ -310,6 +353,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Konsultasi dengan atasan bila ada kendala atau apa yang belum terselesaikan & follow up tugas yang tidak terselesaikan ke atasan, (pagi, siang, sore)',
@@ -317,6 +361,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek piutang yang harus ditagih (jatuh tempo)',
@@ -324,6 +369,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Foto nota piutang (tagihan via online)',
@@ -331,6 +377,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Pisahkan nota < 5 hari jatuh tempo',
@@ -338,6 +385,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Penagihan piutang dan kontrol',
@@ -345,6 +393,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek olshop yang mau terbatalkan / tidak terproses siang & sore',
@@ -352,6 +401,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Penyelesaian piutang olshop bermasalah dan lebih dari 2 minggu & piutang offline lewat masa tenggang',
@@ -359,6 +409,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Shopee, Tokopedia, Lazada dilaporkan ke atasan jika ada kendala (pengembalian)',
@@ -366,6 +417,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek pengembalian Shopee, Lazada, Tokopedia yang baru & dalam proses',
@@ -373,6 +425,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Konfirmasi via telp jika ada perubahan nama item untuk Gudang Jakarta dan Bintan',
@@ -380,6 +433,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Penutupan buku (penerimaan piutang)',
@@ -387,6 +441,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Input nota, info barang kosong, persiapan nota invoice pengantaran',
@@ -394,6 +449,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Nota marketplace dikirim kurang lebih jam 11.00',
@@ -401,6 +457,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Buat nota / invoice antar cabang (penjualan)',
@@ -408,6 +465,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Untuk admin penjualan SO penjualan di selesaikan di hari ini juga, jika terdapat kendala konfirmasi ke atasan',
@@ -415,6 +473,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Setiap data wajib email (arsip)',
@@ -422,6 +481,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Input piutang',
@@ -429,6 +489,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek piutang, sesuaikan fisik invoice piutang dengan komputer',
@@ -436,6 +497,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek & selesaikan min-max pesaan Shopee, Lazada, Tokopedia, jika terdapat kendala lakukan konfirmasi ke atasan (piutang marketplace)',
@@ -443,6 +505,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Metting ke MGR piutang tidak selesai / bermasalah (senin pagi) perminggu',
@@ -450,6 +513,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek nota yang sudah di print hari ini, cek saat nota sudah selesai sore/pagi',
@@ -457,6 +521,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Print email masuk hari sebelumnya',
@@ -464,6 +529,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Nota retur marketplace / pengembalian / pembatalan',
@@ -471,6 +537,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Surat jalan offline dan online',
@@ -478,6 +545,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Hapus barang kosong, baran pengembalian online setiap hari (retur)',
@@ -485,6 +553,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Setiap permasalahan pengiriman, wajib diinfokan secara tertulis (gudang Jakarta)',
@@ -492,6 +561,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Input nota retur offline (cek diskon sebelumnya, input no inv & keterangan retur)',
@@ -499,6 +569,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Setiap akan membuka nota retur, harus dengan ACC & ditandatangani oleh atasan (hapus nota salah input, edit salah order dll)',
@@ -506,6 +577,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Import penjualan marketplace ke GF Akuntansi wajib diselesaikan setiap hari',
@@ -513,6 +585,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Setor ke bank Senin-Jumat',
@@ -520,6 +593,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Input pembayaran hutang',
@@ -527,6 +601,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Laporan balance kas',
@@ -534,6 +609,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Untuk kebun sendiri harus ttd di surat jalan kak axia / bang aming',
@@ -541,6 +617,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Biaya untuk iklan Shopee tidak boleh lebih dari 10%, jika lebih kabari langsung ke atasan',
@@ -548,6 +625,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Pengembalian maksimal 20.000, Acc boss pengembalian dana saja tidak perlu pengembalian barang',
@@ -555,6 +633,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek pekerjaan admin Faraco, Bintan & Gudang',
@@ -562,6 +641,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Pindah gudang Batam setiap hari Selasa & Jumat, kecuali urgent',
@@ -569,6 +649,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
 
             // Tugas Hari Rabu
@@ -578,6 +659,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Penyelesaian pencatatan yang belum selesai siang dan sore, wajib dicatat setiap penyampaian tugas maupun bukan',
@@ -585,6 +667,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Konsultasi dengan atasan bila ada kendala atau apa yang belum terselesaikan & follow up tugas yang tidak terselesaikan ke atasan, (pagi, siang, sore)',
@@ -592,6 +675,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek piutang yang harus ditagih (jatuh tempo)',
@@ -599,6 +683,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Foto nota piutang (tagihan via online)',
@@ -606,6 +691,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Pisahkan nota < 5 hari jatuh tempo',
@@ -613,6 +699,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Penagihan piutang dan kontrol',
@@ -620,6 +707,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek olshop yang mau terbatalkan / tidak terproses siang & sore',
@@ -627,6 +715,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Penyelesaian piutang olshop bermasalah dan lebih dari 2 minggu & piutang offline lewat masa tenggang',
@@ -634,6 +723,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Shopee, Tokopedia, Lazada dilaporkan ke atasan jika ada kendala (pengembalian)',
@@ -641,6 +731,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek pengembalian Shopee, Lazada, Tokopedia yang baru & dalam proses',
@@ -648,6 +739,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Konfirmasi via telp jika ada perubahan nama item untuk Gudang Jakarta dan Bintan',
@@ -655,6 +747,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Penutupan buku (penerimaan piutang)',
@@ -662,6 +755,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Input nota, info barang kosong, persiapan nota invoice pengantaran',
@@ -669,6 +763,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Nota marketplace dikirim kurang lebih jam 11.00',
@@ -676,6 +771,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Buat nota / invoice antar cabang (penjualan)',
@@ -683,6 +779,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Untuk admin penjualan SO penjualan di selesaikan di hari ini juga, jika terdapat kendala konfirmasi ke atasan',
@@ -690,6 +787,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Setiap data wajib email (arsip)',
@@ -697,6 +795,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Input piutang',
@@ -704,6 +803,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek piutang, sesuaikan fisik invoice piutang dengan komputer',
@@ -711,6 +811,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek & selesaikan min-max pesaan Shopee, Lazada, Tokopedia, jika terdapat kendala lakukan konfirmasi ke atasan (piutang marketplace)',
@@ -718,6 +819,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Metting ke MGR piutang tidak selesai / bermasalah (senin pagi) perminggu',
@@ -725,6 +827,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek nota yang sudah di print hari ini, cek saat nota sudah selesai sore/pagi',
@@ -732,6 +835,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Print email masuk hari sebelumnya',
@@ -739,6 +843,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Nota retur marketplace / pengembalian / pembatalan',
@@ -746,6 +851,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Surat jalan offline dan online',
@@ -753,6 +859,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Hapus barang kosong, baran pengembalian online setiap hari (retur)',
@@ -760,6 +867,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Setiap permasalahan pengiriman, wajib diinfokan secara tertulis (gudang Jakarta)',
@@ -767,6 +875,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Input nota retur offline (cek diskon sebelumnya, input no inv & keterangan retur)',
@@ -774,6 +883,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Setiap akan membuka nota retur, harus dengan ACC & ditandatangani oleh atasan (hapus nota salah input, edit salah order dll)',
@@ -781,6 +891,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Import penjualan marketplace ke GF Akuntansi wajib diselesaikan setiap hari',
@@ -788,6 +899,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Setor ke bank Senin-Jumat',
@@ -795,6 +907,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Input pembayaran hutang',
@@ -802,6 +915,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Laporan balance kas',
@@ -809,6 +923,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Untuk kebun sendiri harus ttd di surat jalan kak axia / bang aming',
@@ -816,6 +931,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Biaya untuk iklan Shopee tidak boleh lebih dari 10%, jika lebih kabari langsung ke atasan',
@@ -823,6 +939,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Pengembalian maksimal 20.000, Acc boss pengembalian dana saja tidak perlu pengembalian barang',
@@ -830,6 +947,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek pekerjaan admin Faraco, Bintan & Gudang',
@@ -837,6 +955,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Pindah gudang Batam setiap hari Selasa & Jumat, kecuali urgent',
@@ -844,6 +963,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
 
             // Tugas Hari Kamis
@@ -853,6 +973,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Penyelesaian pencatatan yang belum selesai siang dan sore, wajib dicatat setiap penyampaian tugas maupun bukan',
@@ -860,6 +981,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Konsultasi dengan atasan bila ada kendala atau apa yang belum terselesaikan & follow up tugas yang tidak terselesaikan ke atasan, (pagi, siang, sore)',
@@ -867,6 +989,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek piutang yang harus ditagih (jatuh tempo)',
@@ -874,6 +997,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Foto nota piutang (tagihan via online)',
@@ -881,6 +1005,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Pisahkan nota < 5 hari jatuh tempo',
@@ -888,6 +1013,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Penagihan piutang dan kontrol',
@@ -895,6 +1021,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek olshop yang mau terbatalkan / tidak terproses siang & sore',
@@ -902,6 +1029,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Penyelesaian piutang olshop bermasalah dan lebih dari 2 minggu & piutang offline lewat masa tenggang',
@@ -909,6 +1037,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Shopee, Tokopedia, Lazada dilaporkan ke atasan jika ada kendala (pengembalian)',
@@ -916,6 +1045,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek pengembalian Shopee, Lazada, Tokopedia yang baru & dalam proses',
@@ -923,6 +1053,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Konfirmasi via telp jika ada perubahan nama item untuk Gudang Jakarta dan Bintan',
@@ -930,6 +1061,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Penutupan buku (penerimaan piutang)',
@@ -937,6 +1069,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Input nota, info barang kosong, persiapan nota invoice pengantaran',
@@ -944,6 +1077,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Nota marketplace dikirim kurang lebih jam 11.00',
@@ -951,6 +1085,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Buat nota / invoice antar cabang (penjualan)',
@@ -958,6 +1093,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Untuk admin penjualan SO penjualan di selesaikan di hari ini juga, jika terdapat kendala konfirmasi ke atasan',
@@ -965,6 +1101,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Setiap data wajib email (arsip)',
@@ -972,6 +1109,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Input piutang',
@@ -979,6 +1117,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek piutang, sesuaikan fisik invoice piutang dengan komputer',
@@ -986,6 +1125,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek & selesaikan min-max pesaan Shopee, Lazada, Tokopedia, jika terdapat kendala lakukan konfirmasi ke atasan (piutang marketplace)',
@@ -993,6 +1133,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Metting ke MGR piutang tidak selesai / bermasalah (senin pagi) perminggu',
@@ -1000,6 +1141,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek nota yang sudah di print hari ini, cek saat nota sudah selesai sore/pagi',
@@ -1007,6 +1149,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Print emai masuk hari sebelumnya',
@@ -1014,6 +1157,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Nota retur marketplace / pengembalian / pembatalan',
@@ -1021,6 +1165,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Surat jalan offline dan online',
@@ -1028,6 +1173,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Hapus barang kosong, baran pengembalian online setiap hari (retur)',
@@ -1035,6 +1181,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Setiap permasalahan pengiriman, wajib diinfokan secara tertulis (gudang Jakarta)',
@@ -1042,6 +1189,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Input nota retur offline (cek diskon sebelumnya, input no inv & keterangan retur)',
@@ -1049,6 +1197,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Setiap akan membuka nota retur, harus dengan ACC & ditandatangani oleh atasan (hapus nota salah input, edit salah order dll)',
@@ -1056,6 +1205,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Import penjualan marketplace ke GF Akuntansi wajib diselesaikan setiap hari',
@@ -1063,6 +1213,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Setor ke bank Senin-Jumat',
@@ -1070,6 +1221,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Input pembayaran hutang',
@@ -1077,6 +1229,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Laporan balance kas',
@@ -1084,6 +1237,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Untuk kebun sendiri harus ttd di surat jalan kak axia / bang aming',
@@ -1091,6 +1245,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Biaya untuk iklan Shopee tidak boleh lebih dari 10%, jika lebih kabari langsung ke atasan',
@@ -1098,6 +1253,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Pengembalian maksimal 20.000, Acc boss pengembalian dana saja tidak perlu pengembalian barang',
@@ -1105,6 +1261,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek pekerjaan admin Faraco, Bintan & Gudang',
@@ -1112,6 +1269,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Pindah gudang Batam setiap hari Selasa & Jumat, kecuali urgent',
@@ -1119,6 +1277,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
 
             // Tugas hari Jumat
@@ -1128,6 +1287,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Penyelesaian pencatatan yang belum selesai siang dan sore, wajib dicatat setiap penyampaian tugas maupun bukan',
@@ -1135,6 +1295,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Konsultasi dengan atasan bila ada kendala atau apa yang belum terselesaikan & follow up tugas yang tidak terselesaikan ke atasan, (pagi, siang, sore)',
@@ -1142,6 +1303,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek piutang yang harus ditagih (jatuh tempo)',
@@ -1149,6 +1311,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Foto nota piutang (tagihan via online)',
@@ -1156,6 +1319,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Pisahkan nota < 5 hari jatuh tempo',
@@ -1163,6 +1327,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Penagihan piutang dan kontrol',
@@ -1170,6 +1335,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek olshop yang mau terbatalkan / tidak terproses siang & sore',
@@ -1177,6 +1343,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Penyelesaian piutang olshop bermasalah dan lebih dari 2 minggu & piutang offline lewat masa tenggang',
@@ -1184,6 +1351,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Shopee, Tokopedia, Lazada dilaporkan ke atasan jika ada kendala (pengembalian)',
@@ -1191,6 +1359,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek pengembalian Shopee, Lazada, Tokopedia yang baru & dalam proses',
@@ -1198,6 +1367,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Konfirmasi via telp jika ada perubahan nama item untuk Gudang Jakarta dan Bintan',
@@ -1205,6 +1375,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Penutupan buku (penerimaan piutang)',
@@ -1212,6 +1383,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Input nota, info barang kosong, persiapan nota invoice pengantaran',
@@ -1219,6 +1391,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Nota marketplace dikirim kurang lebih jam 11.00',
@@ -1226,6 +1399,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Buat nota / invoice antar cabang (penjualan)',
@@ -1233,6 +1407,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Untuk admin penjualan SO penjualan di selesaikan di hari ini juga, jika terdapat kendala konfirmasi ke atasan',
@@ -1240,6 +1415,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Setiap data wajib email (arsip)',
@@ -1247,6 +1423,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Input piutang',
@@ -1254,6 +1431,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek piutang, sesuaikan fisik invoice piutang dengan komputer',
@@ -1261,6 +1439,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek & selesaikan min-max pesaan Shopee, Lazada, Tokopedia, jika terdapat kendala lakukan konfirmasi ke atasan (piutang marketplace)',
@@ -1268,6 +1447,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Metting ke MGR piutang tidak selesai / bermasalah (senin pagi) perminggu',
@@ -1275,6 +1455,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek nota yang sudah di print hari ini, cek saat nota sudah selesai sore/pagi',
@@ -1282,6 +1463,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Print emai masuk hari sebelumnya',
@@ -1289,6 +1471,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Nota retur marketplace / pengembalian / pembatalan',
@@ -1296,6 +1479,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Surat jalan offline dan online',
@@ -1303,6 +1487,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Hapus barang kosong, baran pengembalian online setiap hari (retur)',
@@ -1310,6 +1495,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Setiap permasalahan pengiriman, wajib diinfokan secara tertulis (gudang Jakarta)',
@@ -1317,6 +1503,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Input nota retur offline (cek diskon sebelumnya, input no inv & keterangan retur)',
@@ -1324,6 +1511,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Setiap akan membuka nota retur, harus dengan ACC & ditandatangani oleh atasan (hapus nota salah input, edit salah order dll)',
@@ -1331,6 +1519,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Import penjualan marketplace ke GF Akuntansi wajib diselesaikan setiap hari',
@@ -1338,6 +1527,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Setor ke bank Senin-Jumat',
@@ -1345,6 +1535,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Input pembayaran hutang',
@@ -1352,6 +1543,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Laporan balance kas',
@@ -1359,6 +1551,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Untuk kebun sendiri harus ttd di surat jalan kak axia / bang aming',
@@ -1366,6 +1559,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Biaya untuk iklan Shopee tidak boleh lebih dari 10%, jika lebih kabari langsung ke atasan',
@@ -1373,6 +1567,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Pengembalian maksimal 20.000, Acc boss pengembalian dana saja tidak perlu pengembalian barang',
@@ -1380,6 +1575,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek pekerjaan admin Faraco, Bintan & Gudang',
@@ -1387,6 +1583,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Pindah gudang Batam setiap hari Selasa & Jumat, kecuali urgent',
@@ -1394,6 +1591,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
 
             // Tugas hari Sabtu
@@ -1403,6 +1601,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Penyelesaian pencatatan yang belum selesai siang dan sore, wajib dicatat setiap penyampaian tugas maupun bukan',
@@ -1410,6 +1609,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Konsultasi dengan atasan bila ada kendala atau apa yang belum terselesaikan & follow up tugas yang tidak terselesaikan ke atasan, (pagi, siang, sore)',
@@ -1417,6 +1617,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek piutang yang harus ditagih (jatuh tempo)',
@@ -1424,6 +1625,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Foto nota piutang (tagihan via online)',
@@ -1431,6 +1633,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Pisahkan nota < 5 hari jatuh tempo',
@@ -1438,6 +1641,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Penagihan piutang dan kontrol',
@@ -1445,6 +1649,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek olshop yang mau terbatalkan / tidak terproses siang & sore',
@@ -1452,6 +1657,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Penyelesaian piutang olshop bermasalah dan lebih dari 2 minggu & piutang offline lewat masa tenggang',
@@ -1459,6 +1665,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Shopee, Tokopedia, Lazada dilaporkan ke atasan jika ada kendala (pengembalian)',
@@ -1466,6 +1673,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek pengembalian Shopee, Lazada, Tokopedia yang baru & dalam proses',
@@ -1473,6 +1681,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Konfirmasi via telp jika ada perubahan nama item untuk Gudang Jakarta dan Bintan',
@@ -1480,6 +1689,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Penutupan buku (penerimaan piutang)',
@@ -1487,6 +1697,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Input nota, info barang kosong, persiapan nota invoice pengantaran',
@@ -1494,6 +1705,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Nota marketplace dikirim kurang lebih jam 11.00',
@@ -1501,6 +1713,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Buat nota / invoice antar cabang (penjualan)',
@@ -1508,6 +1721,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Untuk admin penjualan SO penjualan di selesaikan di hari ini juga, jika terdapat kendala konfirmasi ke atasan',
@@ -1515,6 +1729,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Setiap data wajib email (arsip)',
@@ -1522,6 +1737,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Input piutang',
@@ -1529,6 +1745,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek piutang, sesuaikan fisik invoice piutang dengan komputer',
@@ -1536,6 +1753,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek & selesaikan min-max pesaan Shopee, Lazada, Tokopedia, jika terdapat kendala lakukan konfirmasi ke atasan (piutang marketplace)',
@@ -1543,6 +1761,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Metting ke MGR piutang tidak selesai / bermasalah (senin pagi) perminggu',
@@ -1550,6 +1769,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek nota yang sudah di print hari ini, cek saat nota sudah selesai sore/pagi',
@@ -1557,6 +1777,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Print emai masuk hari sebelumnya',
@@ -1564,6 +1785,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Nota retur marketplace / pengembalian / pembatalan',
@@ -1571,6 +1793,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Surat jalan offline dan online',
@@ -1578,6 +1801,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Hapus barang kosong, baran pengembalian online setiap hari (retur)',
@@ -1585,6 +1809,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Setiap permasalahan pengiriman, wajib diinfokan secara tertulis (gudang Jakarta)',
@@ -1592,6 +1817,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Input nota retur offline (cek diskon sebelumnya, input no inv & keterangan retur)',
@@ -1599,6 +1825,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Setiap akan membuka nota retur, harus dengan ACC & ditandatangani oleh atasan (hapus nota salah input, edit salah order dll)',
@@ -1606,6 +1833,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Import penjualan marketplace ke GF Akuntansi wajib diselesaikan setiap hari',
@@ -1613,6 +1841,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Setor ke bank Senin-Jumat',
@@ -1620,6 +1849,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Input pembayaran hutang',
@@ -1627,6 +1857,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Laporan balance kas',
@@ -1634,6 +1865,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Untuk kebun sendiri harus ttd di surat jalan kak axia / bang aming',
@@ -1641,6 +1873,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Biaya untuk iklan Shopee tidak boleh lebih dari 10%, jika lebih kabari langsung ke atasan',
@@ -1648,6 +1881,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Pengembalian maksimal 20.000, Acc boss pengembalian dana saja tidak perlu pengembalian barang',
@@ -1655,6 +1889,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Cek pekerjaan admin Faraco, Bintan & Gudang',
@@ -1662,6 +1897,7 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
             [
                 'title' => 'Pindah gudang Batam setiap hari Selasa & Jumat, kecuali urgent',
@@ -1669,7 +1905,11 @@ class TaskAdminSaleSeeders extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Sale',
             ],
         ];
+
+        // Insert the tasks into the database
+        DB::table('tasks')->insert($tasksadminsale);
     }
 }

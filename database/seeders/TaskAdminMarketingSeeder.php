@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class TaskAdminMarketingSeeder extends Seeder
 {
@@ -12,7 +14,7 @@ class TaskAdminMarketingSeeder extends Seeder
      */
     public function run(): void
     {
-        $taskadminmarkering = [
+        $taskadminmarketing = [
 
             // Tugas hari senin
             [
@@ -21,6 +23,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek yang harus di followup di buku / yang belum ada penyelesaian & wajib dicatat setiap penyampaian tugas maupun bukan',
@@ -28,6 +31,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek follow up penawaran ke konsumen & kirim laporan setiap sore',
@@ -35,6 +39,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Pencatatan barang permintaan ke konsumen yang kosong / barang baru belum datang & sebagainya, berika estimasi waktu tersedia kembali',
@@ -42,6 +47,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek setiap komunikasi yang belum terselesaikan kurang lebih 4 jam',
@@ -49,6 +55,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Share barang masuk / info & upload produk baru (jika ada)',
@@ -56,6 +63,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Naikkan produk shopee: pagi-siang-sore',
@@ -63,6 +71,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Mencari konsumen baru di Shopee, Tokopedia, Bukalapak, Lazada, Facebook (jika ada waktu luang cari konsumen di konsumen lapak lain)',
@@ -70,6 +79,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek ulasan negative konsumen (wajib dibalas)',
@@ -77,6 +87,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek orderan batal / belum terbayar di Shopee, dll',
@@ -84,6 +95,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek barang kosong / arsip di marketplace (wajib ditambah) & ditambahkan produk baru jika ada barang baru',
@@ -91,6 +103,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek harga & cek fisik dengan komputer orderan offline',
@@ -98,6 +111,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Info barang kosong di bagian pembelian',
@@ -105,6 +119,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek pengajuan / pengembalian / pembatalan yang baru dan yang sedang dalam proses (Shopee, Lazada, TOkopedia, & Bukalapak',
@@ -112,6 +127,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Fokus penjualan benih yang mendekati expired',
@@ -119,6 +135,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Komunikasi penawaran dimulai dari grup 3, panah merah, alat, maraca pes, dll',
@@ -126,6 +143,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Info harga turun & naik via chat / telp & tanyakan minta order',
@@ -133,6 +151,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek campaign tiap hari (ikuti)',
@@ -140,6 +159,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Barang kosong tetap dicatat (untuk arsip jika datang bisa dikabarkan mengantisipasi lupa)',
@@ -147,6 +167,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Barang baru / kosong notanya yang merah di minta isi kapan ready / di order selanjutnya di info ke konsumen estimasi ready',
@@ -154,6 +175,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Nota harga barang di sobek (meminalisir konsumen beli ke yang lain)',
@@ -161,6 +183,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Kontrol buku catatan (bawahan) setiap hari',
@@ -168,6 +191,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Kontrol centang satu persatu yang sudah selesai dikerjakan (beri centang)',
@@ -175,6 +199,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Kontrol centang keseluruhan tugas wajib yang sudah selesai dikerjakan (beri centang)',
@@ -182,6 +207,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Jika sudah 3 hari pindah ke halaman baru',
@@ -189,6 +215,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Kontrol isi tanggal pada halaman atas',
@@ -196,6 +223,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
 
 
@@ -206,6 +234,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek yang harus di followup di buku / yang belum ada penyelesaian',
@@ -213,6 +242,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek follow up penawaran ke konsumen & kirim laporan setiap sore',
@@ -220,6 +250,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Konsultasi dengan atasan bila ada kendala atau apa yang belum terselesaikan',
@@ -227,6 +258,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Pencatatan barang permintaan ke konsumen yang kosong / barang baru belum datang & sebagainya, berika estimasi waktu tersedia kembali',
@@ -234,6 +266,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek setiap komunikasi yang belum terselesaikan kurang lebih jam 4',
@@ -241,6 +274,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Share barang masuk / info & upload produk baru (jika ada)',
@@ -248,6 +282,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Naikkan produk Shopee, Tokopedia, Lazada, Bukalapak, Facebook (jika ada waktu luang cari konsumen di comment lapak lain',
@@ -255,6 +290,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek ulasan negative konsumen (wajib dibalas)',
@@ -262,6 +298,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek orderan batal / belum terbayar di Shopee, dll',
@@ -269,6 +306,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek barang kosong / arsip di marketplace (wajib ditambah) & ditambahkan produk baru jika ada barang baru',
@@ -276,6 +314,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek harga & cek fisik dengan komputer orderan offline',
@@ -283,6 +322,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Info barang kosong di bagian pembelian',
@@ -290,6 +330,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek pengajuan / pengembalian / pembatalan yang baru dan yang sedang dalam proses (Shopee, Lazada, TOkopedia, & Bukalapak',
@@ -297,6 +338,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Fokus penjualan benih yang mendekati expired',
@@ -304,6 +346,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Komunikasi penawaran dimulai dari grup, panah merah, alat, maraca pes, dll',
@@ -311,6 +354,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Info harga turun & naik via chat / telp & tanyakan minta order',
@@ -318,6 +362,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek campaign tiap hari (ikuti)',
@@ -325,6 +370,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Barang kosong tetap dicatat (untuk arsip jika datang bisa dikabarkan mengantisipasi lupa)',
@@ -332,6 +378,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Barang baru / kosong notanya yang merah di minta isi kapan ready / di order selanjutnya di info ke konsumen estimasi ready',
@@ -339,6 +386,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Nota harga barang di sobek (meminalisir konsumen beli ke yang lain)',
@@ -346,6 +394,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Kontrol buku catatan (bawahan) setiap hari',
@@ -353,6 +402,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Kontrol centang satu persatu yang sudah selesai dikerjakan (beri centang)',
@@ -360,6 +410,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Kontrol centang keseluruhan tugas wajib yang sudah selesai dikerjakan (beri centang)',
@@ -367,6 +418,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Jika sudah 3 hari pindah ke halaman baru',
@@ -374,6 +426,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Isi tanggal pada halaman atas',
@@ -381,6 +434,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
 
             // Tugas hari Rabu
@@ -390,6 +444,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek yang harus di followup di buku / yang belum ada penyelesaian',
@@ -397,6 +452,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek follow up penawaran ke konsumen & kirim laporan setiap sore',
@@ -404,6 +460,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Konsultasi dengan atasan bila ada kendala atau apa yang belum terselesaikan',
@@ -411,6 +468,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Pencatatan barang permintaan ke konsumen yang kosong / barang baru belum datang & sebagainya, berika estimasi waktu tersedia kembali',
@@ -418,6 +476,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek setiap komunikasi yang belum terselesaikan kurang lebih jam 4',
@@ -425,6 +484,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Share barang masuk / info & upload produk baru (jika ada)',
@@ -432,6 +492,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Naikkan produk Shopee, Tokopedia, Lazada, Bukalapak, Facebook (jika ada waktu luang cari konsumen di comment lapak lain',
@@ -439,6 +500,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek ulasan negative konsumen (wajib dibalas)',
@@ -446,6 +508,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek orderan batal / belum terbayar di Shopee, dll',
@@ -453,6 +516,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek pengajuan / pengembalian / pembatalan yang baru dan yang sedang dalam proses (Shopee, Lazada, TOkopedia, & Bukalapak',
@@ -460,6 +524,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Fokus penjualan benih yang mendekati expired',
@@ -467,6 +532,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Info harga turun & naik via chat / telp & tanyakan minta order',
@@ -474,6 +540,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek campaign tiap hari (ikuti)',
@@ -481,6 +548,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Barang kosong tetap dicatat (untuk arsip jika datang bisa dikabarkan mengantisipasi lupa)',
@@ -488,6 +556,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Barang baru / kosong notanya yang merah di minta isi kapan ready / di order selanjutnya di info ke konsumen estimasi ready',
@@ -495,6 +564,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Nota harga barang di sobek (meminalisir konsumen beli ke yang lain)',
@@ -502,6 +572,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Pomp manual 13.8L konsumen',
@@ -509,6 +580,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Zul kelapangan control buku catatan bawahan',
@@ -516,6 +588,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Kontrol buku catatan (bawahan) setiap hari',
@@ -523,6 +596,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Kontrol centang satu persatu yang sudah selesai dikerjakan (beri centang)',
@@ -530,6 +604,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Kontrol centang keseluruhan tugas wajib yang sudah selesai dikerjakan (beri centang)',
@@ -537,6 +612,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Jika sudah 3 hari pindah ke halaman baru',
@@ -544,6 +620,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Isi tanggal pada halaman atas',
@@ -551,6 +628,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
 
             // Tugas hari Kamis
@@ -560,6 +638,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek yang harus di followup di buku / yang belum ada penyelesaian',
@@ -567,6 +646,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek follow up penawaran ke konsumen & kirim laporan setiap sore',
@@ -574,6 +654,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Konsultasi dengan atasan bila ada kendala atau apa yang belum terselesaikan',
@@ -581,6 +662,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Pencatatan barang permintaan ke konsumen yang kosong / barang baru belum datang & sebagainya, berika estimasi waktu tersedia kembali',
@@ -588,6 +670,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek setiap komunikasi yang belum terselesaikan kurang lebih jam 4',
@@ -595,6 +678,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Share barang masuk / info & upload produk baru (jika ada)',
@@ -602,6 +686,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Naikkan produk Shopee (pagi-siang-sore) cek saldo iklan',
@@ -609,6 +694,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Mencari konsumen baru di Shopee, Tokopedia, Lazada, Bukalapak, Facebook (jika ada waktu luang)',
@@ -616,6 +702,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek ulasan negative konsumen (wajib dibalas)',
@@ -623,6 +710,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek barang kosong / arsip di marketplace (wajib ditambah) tambahkan produk baru jika sudah ada barang baru',
@@ -630,6 +718,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek pengajuan / pengembalian / pembatalan yang baru dan yang sedang dalam proses (Shopee, Lazada, TOkopedia, & Bukalapak',
@@ -637,6 +726,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Fokus penjualan benih yang mendekati expired',
@@ -644,6 +734,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Info harga turun & naik via chat / telp & tanyakan minta order',
@@ -651,6 +742,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek fisik harga dan computer, jika barang kosong alihkan / tawarkan barang lain',
@@ -658,6 +750,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek campaign tiap hari (ikuti)',
@@ -665,6 +758,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Barang kosong tetap dicatat (untuk arsip jika datang bisa dikabarkan mengantisipasi lupa)',
@@ -672,6 +766,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Barang baru / kosong notanya yang merah di minta isi kapan ready / di order selanjutnya di info ke konsumen estimasi ready',
@@ -679,6 +774,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Nota harga barang di sobek (meminalisir konsumen beli ke yang lain)',
@@ -686,6 +782,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Kontrol buku catatan (bawahan) setiap hari',
@@ -693,6 +790,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Kontrol centang satu persatu yang sudah selesai dikerjakan (beri centang)',
@@ -700,6 +798,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Kontrol centang keseluruhan tugas wajib yang sudah selesai dikerjakan (beri centang)',
@@ -707,6 +806,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Jika sudah 3 hari pindah ke halaman baru',
@@ -714,6 +814,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Isi tanggal pada halaman atas',
@@ -721,6 +822,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
 
 
@@ -731,6 +833,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek yang harus di followup di buku / yang belum ada penyelesaian',
@@ -738,6 +841,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek follow up penawaran ke konsumen & kirim laporan setiap sore',
@@ -745,6 +849,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Konsultasi dengan atasan bila ada kendala atau apa yang belum terselesaikan',
@@ -752,6 +857,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Pencatatan barang permintaan ke konsumen yang kosong / barang baru belum datang & sebagainya, berika estimasi waktu tersedia kembali',
@@ -759,6 +865,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek setiap komunikasi yang belum terselesaikan kurang lebih jam 4',
@@ -766,6 +873,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Share barang masuk / info & upload produk baru (jika ada)',
@@ -773,6 +881,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Naikkan produk Shopee (pagi-siang-sore) cek saldo iklan',
@@ -780,6 +889,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Mencari konsumen baru di Shopee, Tokopedia, Lazada, Bukalapak, Facebook (jika ada waktu luang)',
@@ -787,6 +897,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek ulasan negative konsumen (wajib dibalas)',
@@ -794,6 +905,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek barang kosong / arsip di marketplace (wajib ditambah) tambahkan produk baru jika sudah ada barang baru',
@@ -801,6 +913,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek pengajuan / pengembalian / pembatalan yang baru dan yang sedang dalam proses (Shopee, Lazada, TOkopedia, & Bukalapak',
@@ -808,6 +921,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Fokus penjualan benih yang mendekati expired',
@@ -815,6 +929,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek fisik harga dan computer, jika barang kosong alihkan / tawarkan barang lain',
@@ -822,6 +937,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek campaign tiap hari (ikuti)',
@@ -829,6 +945,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Barang kosong tetap dicatat (untuk arsip jika datang bisa dikabarkan mengantisipasi lupa)',
@@ -836,6 +953,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Nota harga barang di sobek (meminalisir konsumen beli ke yang lain)',
@@ -843,6 +961,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Kontrol buku catatan (bawahan) setiap hari',
@@ -850,6 +969,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Kontrol centang satu persatu yang sudah selesai dikerjakan (beri centang)',
@@ -857,6 +977,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Kontrol centang keseluruhan tugas wajib yang sudah selesai dikerjakan (beri centang)',
@@ -864,6 +985,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Jika sudah 3 hari pindah ke halaman baru',
@@ -871,6 +993,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Isi tanggal pada halaman atas',
@@ -878,6 +1001,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
 
             // Tugas hari sabtu
@@ -887,6 +1011,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek yang harus di followup di buku / yang belum ada penyelesaian',
@@ -894,6 +1019,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek follow up penawaran ke konsumen & kirim laporan setiap sore',
@@ -901,6 +1027,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Konsultasi dengan atasan bila ada kendala atau apa yang belum terselesaikan',
@@ -908,6 +1035,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Pencatatan barang permintaan ke konsumen yang kosong / barang baru belum datang & sebagainya, berika estimasi waktu tersedia kembali',
@@ -915,6 +1043,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek setiap komunikasi yang belum terselesaikan kurang lebih jam 4',
@@ -922,6 +1051,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Share barang masuk / info & upload produk baru (jika ada)',
@@ -929,6 +1059,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Naikkan produk Shopee (pagi-siang-sore) cek saldo iklan',
@@ -936,6 +1067,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Mencari konsumen baru di Shopee, Tokopedia, Lazada, Bukalapak, Facebook (jika ada waktu luang)',
@@ -943,6 +1075,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek ulasan negative konsumen (wajib dibalas)',
@@ -950,6 +1083,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek barang kosong / arsip di marketplace (wajib ditambah) tambahkan produk baru jika sudah ada barang baru',
@@ -957,6 +1091,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek pengajuan / pengembalian / pembatalan yang baru dan yang sedang dalam proses (Shopee, Lazada, TOkopedia, & Bukalapak',
@@ -964,6 +1099,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Fokus penjualan benih yang mendekati expired',
@@ -971,6 +1107,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Riset harga, produk, promo, pelayanan marketplace pesaing offline',
@@ -978,6 +1115,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek fisik harga dan computer, jika barang kosong alihkan / tawarkan barang lain',
@@ -985,6 +1123,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek campaign tiap hari (ikuti)',
@@ -992,6 +1131,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Barang kosong tetap dicatat (untuk arsip jika datang bisa dikabarkan mengantisipasi lupa)',
@@ -999,6 +1139,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Barang baru / kosong nta merah di minta isi kapan ready / order ',
@@ -1006,6 +1147,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Nota harga barang di sobek (meminalisir konsumen beli ke yang lain)',
@@ -1013,6 +1155,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Zul kelapangan',
@@ -1020,6 +1163,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Kontrol buku catatan (bawahan) setiap hari',
@@ -1027,6 +1171,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Kontrol centang satu persatu yang sudah selesai dikerjakan (beri centang)',
@@ -1034,6 +1179,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Kontrol centang keseluruhan tugas wajib yang sudah selesai dikerjakan (beri centang)',
@@ -1041,6 +1187,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Jika sudah 3 hari pindah ke halaman baru',
@@ -1048,6 +1195,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Isi tanggal pada halaman atas',
@@ -1055,6 +1203,7 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
             [
                 'title' => 'Cek harga kewajaran, harga online )',
@@ -1062,7 +1211,11 @@ class TaskAdminMarketingSeeder extends Seeder
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
+                'role' => 'Admin Marketing',
             ],
         ];
+
+        // Insert the tasks into the database
+        DB::table('tasks')->insert($taskadminmarketing);
     }
 }
