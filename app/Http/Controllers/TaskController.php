@@ -74,9 +74,9 @@ class TaskController extends Controller
         // Mendapatkan karyawan yang sedang login
         $karyawan = $request->user(); // Pastikan ini adalah karyawan yang benar
 
-        // Set tugas dari sistem
+        // Set role sesuai dengan role karyawan yang sedang login
         $validated['from_system'] = false;
-        $validated['role'] = 'Manajemen'; // Atur role ke Manajemen
+        $validated['role'] = $karyawan->role; // Mengambil role karyawan yang sedang login
 
         // Buat tugas baru
         $task = Task::create($validated);
@@ -170,38 +170,35 @@ class TaskController extends Controller
     // Mendapatkan data dashboard untuk admin aplikasi
     public function getDashboardData()
     {
-        // Mengambil semua karyawan dari database
+        // Ambil semua karyawan dari database
         $karyawans = Karyawan::all();
 
-        // Array untuk menampung data dashboard dari semua karyawan
         $dashboardData = [];
 
         foreach ($karyawans as $karyawan) {
-            // Hitung tugas yang selesai oleh karyawan ini
+            // Filter tugas berdasarkan role karyawan
             $completedTasks = TaskAssignment::where('id_karyawan', $karyawan->id_karyawan)
                                             ->where('completed', true)
                                             ->count();
 
-            // Hitung tugas yang belum selesai oleh karyawan ini
             $incompleteTasks = TaskAssignment::where('id_karyawan', $karyawan->id_karyawan)
                                             ->where('completed', false)
                                             ->count();
 
-            // Masukkan data karyawan ke array dashboardData
             $dashboardData[] = [
                 'nama' => $karyawan->nama,
                 'role' => $karyawan->role,
                 'tugas_selesai' => $completedTasks,
-                'tugas_belum_selesai' => $incompleteTasks
+                'tugas_belum_selesai' => $incompleteTasks,
             ];
         }
 
-        // Kembalikan respons dengan semua data karyawan
         return response()->json([
             'status' => 'success',
-            'data' => $dashboardData
+            'data' => $dashboardData,
         ], 200);
     }
+
 
     // Mendapatkan data dashboard untuk karyawan per id
     public function getDashboardKaryawanById($id) 
