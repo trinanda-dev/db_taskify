@@ -105,60 +105,68 @@ class TaskController extends Controller
 
     // Mengupdate status task berdasarkan karyawan (dengan task_assignments)
     public function updateTaskStatus(Request $request, Task $task) 
-    {
-        // Validasi input
-        $validated = $request->validate([
-            'completed' => 'required|boolean',
-            'id_karyawan' => 'required|string|exists:karyawans,id_karyawan'
-        ]);
+{
+    // Mendapatkan user yang sedang login
+    $karyawan = $request->user(); // Ambil karyawan yang login
 
-        // Cari assignment tugas untuk karyawan ini
-        $assignment = TaskAssignment::where('task_id', $task->id)
-                                    ->where('id_karyawan', $validated['id_karyawan'])
-                                    ->first();
+    // Validasi input
+    $validated = $request->validate([
+        'completed' => 'required|boolean',
+        'id_karyawan' => 'required|string|exists:karyawans,id_karyawan'
+    ]);
 
-        if ($assignment) {
-            // Update status jika assignment sudah ada
-            $assignment->update(['completed' => $validated['completed']]);
-        } else {
-            // Buat assignment baru jika belum ada
-            TaskAssignment::create([
-                'task_id' => $task->id,
-                'id_karyawan' => $validated['id_karyawan'],
-                'completed' => $validated['completed'],
-            ]);
-        }
-
-        // Cek apakah entri task_assignment berhasil dibuat atau diperbaharui
-        $new_assignment = TaskAssignment::where('task_id', $task->id)
-                                        ->where('id_karyawan', $validated['id_karyawan'])
-                                        ->first();
-        
-        // Jika assignment berhasil dibuat, kembalikan respons sukses
-        if ($new_assignment) {
-            return response()->json([
-                'status' => 'success',
-                'message' => 'Task status updated for karyawan ' . $validated['id_karyawan'],
-                'task' => [
-                    'id' => $task->id,
-                    'title' => $task->title,
-                    'completed' => $new_assignment->completed, // Ambil status dari TaskAssignment
-                    'date' => $task->date,
-                    'time' => $task->time,
-                    'role' => $task->role,
-                ]
-            ], 200);
-        } else {
-            // Jika gagal, kembalikan pesan error
-            return response()->json([
-                'status' => 'error',
-                'message' => 'Gagal menyimpan status completed ke dalam task_assignment',
-            ], 500);
-        }
+    // Pastikan karyawan yang sedang login hanya bisa mengubah tugas miliknya
+    if ($validated['id_karyawan'] != $karyawan->id_karyawan) {
+        return response()->json([
+            'status' => 'error',
+            'message' => 'Anda tidak diizinkan untuk mengubah tugas orang lain.'
+        ], 403); // 403 Forbidden
     }
 
+    // Cari assignment tugas untuk karyawan yang sedang login
+    $assignment = TaskAssignment::where('task_id', $task->id)
+                                ->where('id_karyawan', $validated['id_karyawan'])
+                                ->first();
 
+    if ($assignment) {
+        // Update status jika assignment sudah ada
+        $assignment->update(['completed' => $validated['completed']]);
+    } else {
+        // Buat assignment baru jika belum ada
+        TaskAssignment::create([
+            'task_id' => $task->id,
+            'id_karyawan' => $validated['id_karyawan'],
+            'completed' => $validated['completed'],
+        ]);
+    }
 
+    // Cek apakah entri task_assignment berhasil dibuat atau diperbaharui
+    $new_assignment = TaskAssignment::where('task_id', $task->id)
+                                    ->where('id_karyawan', $validated['id_karyawan'])
+                                    ->first();
+    
+    // Jika assignment berhasil dibuat, kembalikan respons sukses
+    if ($new_assignment) {
+        return response()->json([
+            'status' => 'success',
+            'message' => 'Task status updated for karyawan ' . $validated['id_karyawan'],
+            'task' => [
+                'id' => $task->id,
+                'title' => $task->title,
+                'completed' => $new_assignment->completed, // Ambil status dari TaskAssignment
+                'date' => $task->date,
+                'time' => $task->time,
+                'role' => $task->role,
+            ]
+        ], 200);
+    } else {
+        // Jika gagal, kembalikan pesan error
+        return response()->json([
+            'status' => 'error',
+            'message' => 'Gagal menyimpan status completed ke dalam task_assignment',
+        ], 500);
+    }
+}
     // Mendapatkan data dashboard untuk admin aplikasi
     public function getDashboardData()
     {
