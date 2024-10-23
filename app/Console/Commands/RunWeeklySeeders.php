@@ -19,7 +19,7 @@ class RunWeeklySeeders extends Command
      *
      * @var string
      */
-    protected $description = 'un weekly seeders every Sunday at 08:00';
+    protected $description = 'run weekly seeders every Sunday at 08:00';
 
     /**
      * Execute the console command.
@@ -27,6 +27,11 @@ class RunWeeklySeeders extends Command
     public function handle()
     {
         // Mejalankan semua seeder yang dibutuhkan
-        Artisan::call
+        Artisan::call('db:seed', ['--class' => 'GudangJakartaSeeder']);
+        Artisan::call('db:seed', ['--class' => 'TaskGudangBintanSeeder']);
+        Artisan::call('db:seed', ['--class' => 'TaskAdminMarketingSeeder']);
+        Artisan::call('db:seed', ['--class' => 'TaskAdminSaleSeeders']);
+        Artisan::call('db:seed', ['--class' => 'TaskKepalaTokoSeeder']);
+        Artisan::call('db:seed', ['--class' => 'TaskManajemenSeeder']);
     }
 }
