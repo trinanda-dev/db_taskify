@@ -14,7 +14,8 @@ class TaskKepalaTokoSeeder extends Seeder
      */
     public function run(): void
     {
-        $taskkepalatoko = [
+        $taskkepalatoko = [];
+        $taskkepalatoko[] = [
             // Tugas hari senin
             [
                 'title' => 'Penyelesaian complain & saran',
@@ -699,6 +700,137 @@ class TaskKepalaTokoSeeder extends Seeder
                 'role'  => 'Kepala Toko',
             ],
         ];
+
+        // Memperoleh tanggal saat ini dan bulan saat ini
+        $today = Carbon::now()->format('d'); // Mendapatkan tanggal saat ini
+        $thisMonth = Carbon::now()->format('m'); // Mendapatkan bulan saat ini
+        $weekOfMonth = carbon::now()->weekOfMonth; // Mendapattkan minggu ke berapa ini dalam bulan
+        $dayOfWeek = Carbon::now()->dayOfWeek; // 3 = Rabu
+
+        // Tugas audit jakarta setiap Minggu ke 4 pada bulan 2, 5, 8, 11
+        if ($weekOfMonth == 4 && in_array($thisMonth, ['02', '05', '08', '11'])) {
+            $taskkepalatoko[] = [
+                'title' => 'Audit Jakarta (Gudang) alat dan benih',
+                'date' => Carbon::now()->format('Y-m-d'),
+                'time' => '08:00:00',
+                'completed' => false, 
+                'from_system' => true,
+                'role' => 'Kepala Toko',
+            ];
+        }
+
+        // Tugas audit Tani Mas pada Rabu Minggu ke-2 (setiap bulan)
+        if ($dayOfWeek == Carbon::WEDNESDAY && $weekOfMonth == 2) {
+            $taskkepalatoko[] = [
+                'title' => 'Audit Tani Mas',
+                'date' => Carbon::now()->format('Y-m-d'),
+                'time' => '08:00:00',
+                'completed' => false,
+                'from_system' => true,
+                'role' => 'Kepala Toko',
+            ];
+        }
+
+        // Tugas audit Tani Makmur pada Rabu Minggu ke-3 (setiap bulan)
+        if ($dayOfWeek == Carbon::WEDNESDAY && $weekOfMonth == 3) {
+            $taskkepalatoko[] = [
+                'title' => 'Audit Tani Makmur',
+                'date' => Carbon::now()->format('Y-m-d'),
+                'time' => '08:00:00',
+                'completed' => false,
+                'from_system' => true,
+                'role' => 'Kepala Toko',
+            ];
+        }
+
+        // Tugas Audit Bintan (Gudang) - Alat (Senin/Selasa di Minggu ke-1 setiap bulan)
+        if (in_array($dayOfWeek, [Carbon::MONDAY, Carbon::TUESDAY]) && $weekOfMonth == 1) {
+            $taskgudangbintan[] = [
+                'title' => 'Audit Bintan (Gudang) - Alat',
+                'date' => Carbon::now()->format('Y-m-d'),
+                'time' => '08:00:00',
+                'completed' => false,
+                'from_system' => true,
+                'role' => 'Kepala Toko',
+            ];
+        }
+
+        // Tugas Audit Bintan (Gudang) - Benih & Pupuk (Senin/Selasa di Minggu ke-2 setiap bulan)
+        if (in_array($dayOfWeek, [Carbon::MONDAY, Carbon::TUESDAY]) && $weekOfMonth == 2) {
+            $taskgudangbintan[] = [
+                'title' => 'Audit Bintan (Gudang) - Benih & Pupuk',
+                'date' => Carbon::now()->format('Y-m-d'),
+                'time' => '08:00:00',
+                'completed' => false,
+                'from_system' => true,
+                'role' => 'Kepala Toko',
+            ];
+        }
+
+        // Tugas Audit Bintan (Gudang) - Pestisida (Senin/Selasa di Minggu ke-3 dengan syarat tanggal 1-25 pada bulan 3, 6, 9, 12)
+        if (
+            in_array($dayOfWeek, [Carbon::MONDAY, Carbon::TUESDAY]) && 
+            $weekOfMonth == 3 && 
+            $today >= 1 && $today <= 25 && 
+            in_array($thisMonth, ['03', '06', '09', '12'])
+        ) {
+            $taskgudangbintan[] = [
+                'title' => 'Audit Bintan (Gudang) - Pestisida',
+                'date' => Carbon::now()->format('Y-m-d'),
+                'time' => '08:00:00',
+                'completed' => false,
+                'from_system' => true,
+                'role' => 'Kepala Toko',
+            ];
+        }
+
+        // Tugas audit Tani Mandiri pada Rabu Minggu ke-4 (setiap bulan)
+        if ($dayOfWeek == Carbon::WEDNESDAY && $weekOfMonth == 4) {
+            $taskkepalatoko[] = [
+                'title' => 'Audit Tani Mandiri',
+                'date' => Carbon::now()->format('Y-m-d'),
+                'time' => '08:00:00',
+                'completed' => false,
+                'from_system' => true,
+                'role' => 'Kepala Toko',
+            ];
+        }
+
+        // Tugas audit Tani Maju pada Rabu Minggu ke-4 (setiap bulan)
+        if ($dayOfWeek == Carbon::WEDNESDAY && $weekOfMonth == 1) {
+            $taskkepalatoko[] = [
+                'title' => 'Audit Tani Maju',
+                'date' => Carbon::now()->format('Y-m-d'),
+                'time' => '08:00:00',
+                'completed' => false,
+                'from_system' => true,
+                'role' => 'Kepala Toko',
+            ];
+        }
+
+        // Tugas Audit Batam pada Jumat Minggu ke-3 di bulan 1, 4, 7, 10
+        if ($dayOfWeek == Carbon::FRIDAY && $weekOfMonth == 3 && in_array($thisMonth, ['01', '04', '07', '10'])) {
+            $taskbatam[] = [
+                'title' => 'Audit Batam',
+                'date' => Carbon::now()->format('Y-m-d'),
+                'time' => '08:00:00',
+                'completed' => false,
+                'from_system' => true,
+                'role' => 'Kepala Toko',
+            ];
+        }
+
+        // Tugas audit Tani Maju pada Rabu Minggu ke-4 (setiap bulan)
+        if ($dayOfWeek == Carbon::THURSDAY && $weekOfMonth == 4) {
+            $taskkepalatoko[] = [
+                'title' => 'Audit Sukses Tani',
+                'date' => Carbon::now()->format('Y-m-d'),
+                'time' => '08:00:00',
+                'completed' => false,
+                'from_system' => true,
+                'role' => 'Kepala Toko',
+            ];
+        }
 
         // Insert the tasks into the database
         DB::table('tasks')->insert($taskkepalatoko);

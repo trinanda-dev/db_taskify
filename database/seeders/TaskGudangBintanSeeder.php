@@ -14,7 +14,9 @@ class TaskGudangBintanSeeder extends Seeder
      */
     public function run(): void
     {
-        $taskgudangbintan = [
+        $taskgudangbintan = [];
+
+        $taskgudangbintan[] = [
             // Tugas untuk hari senin
             [
                 'title' => 'Cek pengantaran yang belum selesai (pagi / hari sebelumnya)',
@@ -611,6 +613,95 @@ class TaskGudangBintanSeeder extends Seeder
                 'role' => 'Gudang Bintan',
             ],
         ];
+
+        // Mendapatkan tanggal dan bulan saat ini
+        $today = Carbon::now()->format('d'); // Mendapatkan tanggal dua digit
+        $thisMonth = Carbon::now()->format('m'); // Mendapatkan bulan
+
+        // Tugas yang muncul pada tanggal 1-3 setiap bulan
+        if (in_array($today, ['01',  '02', '03'])) {
+            $taskgudangbintan[] = [
+                'title' => 'Cek expired barang benih',
+                'date' => Carbon::now()->format('Y-m-d'),
+                'time' => '08:00:00',
+                'completed' => false, 
+                'from_system' => true,
+                'role' => 'Gudang Bintan',
+
+            ];
+        }
+
+        // Tugas cek stok barang pada bulan 3, 6, 9, 12 dan tanggal 1
+        if ($today == '01' && in_array($thisMonth, ['03', '06', '09', '12'])) {
+            $taskgudangbintan[] = [
+                'title' => 'Cek stok barang',
+                'date' => Carbon::now()->format('Y-m-d'),
+                'time' => '08:00:00',
+                'completed' => false, 
+                'from_system' => true,
+                'role' => 'Gudang Bintan',
+            ];
+        }
+
+        // Tugas ganti oli pada bulan 1, 4, 7, 10 dan tanggal 5
+        if ($today == '05' && in_array($thisMonth, ['01', '04', '07', '10'])) {
+            $taskgudangbintan[] = [
+                'title' => 'Ganti oli (lori, engkel, hilux)',
+                'date' => Carbon::now()->format('Y-m-d'),
+                'time' => '08:00:00',
+                'completed' => false, 
+                'from_system' => true,
+                'role' => 'Gudang Bintan',
+            ];
+        }
+
+        // Tugas ganti filter oli dan bersihkan udara pada bulan 1 dan 7 dan tanggal 5
+        if ($today == '05' && in_array($thisMonth, ['01', '07'])) {
+            $taskgudangbintan[] = [
+                'title' => 'Ganti filter oli dan bersihkan udara (lori, engkel, hilux)',
+                'date' => Carbon::now()->format('Y-m-d'),
+                'time' => '08:00:00',
+                'completed' => false, 
+                'from_system' => true,
+                'role' => 'Gudang Bintan',
+            ];
+        }
+
+        // Tugas cek servis berkala seluruh kondisi kendaraan pada bulan 1 dan 7 dan tanggal 5
+        if ($today == '05' && in_array($thisMonth, ['01', '07'])) {
+            $taskgudangbintan[] = [
+                'title' => 'Cek / service berkala selruruh kondisi kendaraan (lori, engkel, hilux, forklip)',
+                'date' => Carbon::now()->format('Y-m-d'),
+                'time' => '08:00:00',
+                'completed' => false, 
+                'from_system' => true,
+                'role' => 'Gudang Bintan',
+            ];
+        }
+
+        // Tugas ganti oli dan stel rantai setiap bulan dan tanggal 10
+        if ($today == '10') {
+            $taskgudangbintan[] = [
+                'title' => 'Ganti oli dan stel rantai (revo, supra, vario, dll)',
+                'date' => Carbon::now()->format('Y-m-d'),
+                'time' => '08:00:00',
+                'completed' => false, 
+                'from_system' => true,
+                'role' => 'Gudang Bintan',
+            ];
+        }
+
+        // Tugas cek & service berkala seluruh kondisi kenadaran bulan 1 dan 7 setiap tanggal 10
+        if ($today == '10' && in_array($thisMonth, ['01', '07'])) {
+            $taskgudangbintan[] = [
+                'title' => 'Ganti oli dan stel rantai (revo, supra, vario, dll)',
+                'date' => Carbon::now()->format('Y-m-d'),
+                'time' => '08:00:00',
+                'completed' => false, 
+                'from_system' => true,
+                'role' => 'Gudang Bintan',
+            ];
+        }
 
         // Insert the tasks into the database
         DB::table('tasks')->insert($taskgudangbintan);

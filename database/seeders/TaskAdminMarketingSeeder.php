@@ -14,7 +14,9 @@ class TaskAdminMarketingSeeder extends Seeder
      */
     public function run(): void
     {
-        $taskadminmarketing = [
+
+        $taskadminmarketing = [];
+        $taskadminmarketing[] = [
 
             // Tugas hari senin
             [
@@ -1214,6 +1216,57 @@ class TaskAdminMarketingSeeder extends Seeder
                 'role' => 'Admin Marketing',
             ],
         ];
+
+        // Mendapatkan tanggal hari ini
+        $today = Carbon::now()->format('d');  // Mengambil tanggal fromat dua digit
+
+        // Tugas yang muncul setiap tanggal 5
+        if (in_array($today, ['05'])) {
+            $taskadminmarketing[] = [
+                'title' => 'Follow up ke petani besar bintan',
+                'date' => Carbon::now()->format('Y-m-d'),
+                'time' => '08:00:00',
+                'completed' => false,
+                'from_system' => true,
+                'role' => 'Admin Sale',
+            ];
+        }
+
+        // Tugas yang muncul setiap tanggal 10
+        if (in_array($today, ['10'])) {
+            $taskadminmarketing[] = [
+                'title' => 'Promosi ke distributor',
+                'date' => Carbon::now()->format('Y-m-d'),
+                'time' => '08:00:00',
+                'completed' => false,
+                'from_system' => true,
+                'role' => 'Admin Marketing',
+            ];
+        }
+
+        // Tugas yang muncul setiap tanggal 15
+        if (in_array($today, ['15'])) {
+            $taskadminmarketing[] = [
+                'title' => 'Lakukan pencatatan atas orderan terakhir konsumen di Bintan dengan fokus padatanggal genap (2, 4, 6, 8, 10, 12, dan 28 untuk pulau), lalu cek orderan selama 9 bulan terakhir',
+                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'time' => '08:00:00',
+                'completed' => false,
+                'from_system' => true,
+                'role' => 'Admin Marketing',
+            ];
+        }
+
+        // Tugas yang muncul setiap tanggal 20
+        if (in_array($today, ['20'])) {
+            $taskadminmarketing[] = [
+                'title' => 'Print total orderan per 1 bulan nilai pengambilan konsumen',
+                'date' => Carbon::now()->format('Y-m-d'),
+                'time' => '08:00:00',
+                'completed' => false,
+                'from_system' => true,
+                'role' => 'Admin Marketing',
+            ];
+        }
 
         // Insert the tasks into the database
         DB::table('tasks')->insert($taskadminmarketing);

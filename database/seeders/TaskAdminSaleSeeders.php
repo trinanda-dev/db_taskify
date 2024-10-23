@@ -14,7 +14,10 @@ class TaskAdminSaleSeeders extends Seeder
      */
     public function run(): void
     {
-        $tasksadminsale = [
+        $tasksadminsale = [];
+
+        
+        $tasksadminsale[] = [
             // Tugas untuk hari senin
             [
                 'title' => 'Pengecekan buku catatan harian siang dan sore',
@@ -1908,6 +1911,33 @@ class TaskAdminSaleSeeders extends Seeder
                 'role' => 'Admin Sale',
             ],
         ];
+
+        // Mendapatkan tanggal hari ini
+        $today = Carbon::now()->format('d'); // Mengambil tanggal format dua digit
+
+        // Tugas yang muncul setiap tanggal 1-3
+        if (in_array($today, ['01', '02', '03'])) {
+            $tasksadminsale[] = [
+                'title' => 'Print Bonus Maraco',
+                'date' => Carbon::now()->format('Y-m-d'),
+                'time' => '08:00:00',
+                'completed' => false,
+                'from_system'  => true,
+                'role' => 'Admin Sale'
+            ];
+        }
+
+        // Tugas yang muncul setiap tanggal 2-4
+        if(in_array($today, ['02', '03', '04'])) {
+            $tasksadminsale[] = [
+                'title' => 'Sesuaikan fisik invoice piutang dengan GF Akuntansi',
+                'date' => Carbon::now()->format('Y-m-d'),
+                'time' => '08:00:00',
+                'completed' => false,
+                'from_system' => true,
+                'role' => 'Admin Sale'
+            ];
+        }
 
         // Insert the tasks into the database
         DB::table('tasks')->insert($tasksadminsale);

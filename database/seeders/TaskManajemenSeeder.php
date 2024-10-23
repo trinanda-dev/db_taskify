@@ -13,6 +13,7 @@ class TaskManajemenSeeder extends Seeder
      */
     public function run(): void
     {
+        $tasks = [];
         $tasks = [
             // Tugas untuk hari senin
             [
@@ -930,6 +931,72 @@ class TaskManajemenSeeder extends Seeder
                 'role' => 'Manajemen',
             ],
         ];
+
+
+        // Mendapatkan tanggal hari ini
+        $today = Carbon::now()->format('d'); // Mengambil tanggal format dua digit
+
+        // Tugas yang muncul setiap tanggal 1-3
+        if (in_array($today, ['01', '02', '03'])) {
+            $tasksadminsale[] = [
+                'title' => 'Returan nota piutang',
+                'date' => Carbon::now()->format('Y-m-d'),
+                'time' => '08:00:00',
+                'completed' => false,
+                'from_system'  => true,
+                'role' => 'Manajemen'
+            ];
+        }
+
+        // Tugas yang muncul setiap tanggal 1-3
+        if (in_array($today, ['01', '02', '03'])) {
+            $tasksadminsale[] = [
+                'title' => 'Follow up orderan konsumen',
+                'date' => Carbon::now()->format('Y-m-d'),
+                'time' => '08:00:00',
+                'completed' => false,
+                'from_system'  => true,
+                'role' => 'Manajemen'
+            ];
+        }
+
+        // Tugas yang muncul setiap tanggal 1
+        if ($today == '1') {
+            $tasksadminsale[] = [
+                'title' => 'Cek bibit expired',
+                'date' => Carbon::now()->format('Y-m-d'),
+                'time' => '08:00:00',
+                'completed' => false,
+                'from_system'  => true,
+                'role' => 'Manajemen'
+            ];
+        }
+
+        // Tugas yang muncul setiap tanggal 3-5
+        if (in_array($today, ['03', '04', '05'])) {
+            $tasksadminsale[] = [
+                'title' => 'Cek stok barang',
+                'date' => Carbon::now()->format('Y-m-d'),
+                'time' => '08:00:00',
+                'completed' => false,
+                'from_system'  => true,
+                'role' => 'Manajemen'
+            ];
+        }
+
+        // Tugas yang muncul setiap tanggal 27-30
+        if (in_array($today, ['27', '28', '29', '30'])) {
+            $tasksadminsale[] = [
+                'title' => 'Cek target konsumen ',
+                'date' => Carbon::now()->format('Y-m-d'),
+                'time' => '08:00:00',
+                'completed' => false,
+                'from_system'  => true,
+                'role' => 'Manajemen'
+            ];
+        }
+
+
 
         // Insert the tasks into the database
         DB::table('tasks')->insert($tasks);
