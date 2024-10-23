@@ -14,49 +14,47 @@ class TaskController extends Controller
     public function index(Request $request) 
     {
         // Mendapatkan karyawan yang sedang login
-        $karyawan = $request->user(); // Pastikan ini mengembalikan karyawan yang benar
+        $karyawan = $request->user();
 
         // Mendapatkan tanggal hari ini
         $today = Carbon::today()->format('Y-m-d');
 
-        // Mengambil semua tugas yang terkait dengan karyawan yang sedang login dari task_assignments
-        $tasks = Task::whereHas('taskAssignments', function($query) use ($karyawan) {
-            $query->where('id_karyawan', $karyawan->id_karyawan);
-        })->whereDate('date', $today)->get();
+        // Mengambil semua tugas dari tabel Task yang sesuai dengan role karyawan yang login
+        $tasks = Task::where('role', $karyawan->role)
+                    ->whereDate('date', $today)
+                    ->get();
 
-        // Pisahkan tugas berdasarkan sumber
-        $systemTask = $tasks->where('from_system', true); // Tugas dari sistem
-        $userTask = $tasks->where('from_system', false); // Tugas dari user
-
-        // Periksa status penyelesaian tugas untuk karyawan yang sedang login
+        // Lakukan iterasi ke semua tugas dan duplikasikan ke task_assignments jika belum ada
         foreach ($tasks as $task) {
-            // Cek status task dari tabel TaskAssignment untuk karyawan yang sedang login
-            $assignment = TaskAssignment::where('task_id', $task->id)
-                                        ->where('id_karyawan', $karyawan->id_karyawan)
-                                        ->first();
-
-            // Update status 'completed' berdasarkan assignment untuk karyawan ini
-            if (!$assignment) {
-                \Log::debug('Assignment tidak ditemukan untuk task ID ' . $task->id . ' dan karyawan ID ' . $karyawan->id_karyawan);
-
-                // Buat assignment baru jika tidak ada
+            $existingAssignment = TaskAssignment::where('task_id', $task->id)
+                                                ->where('id_karyawan', $karyawan->id_karyawan)
+                                                ->first();
+            if (!$existingAssignment) {
                 TaskAssignment::create([
                     'task_id' => $task->id,
                     'id_karyawan' => $karyawan->id_karyawan,
-                    'completed' => false, // Default false
+                    'completed' => false, // Default belum selesai
                 ]);
-            } else {
-                // Set nilai completed berdasarkan assignment
-                $task->completed = $assignment->completed;
             }
         }
 
-        // Kembalikan respons dengan struktur yang benar, meskipun tugas kosong
+        // Mengambil tugas-tugas yang telah diassign ke karyawan dari tabel TaskAssignment
+        $assignedTasks = TaskAssignment::where('id_karyawan', $karyawan->id_karyawan)
+                                    ->with('task') // Mengambil detail tugas dari Task
+                                    ->whereHas('task', function($query) use ($today) {
+                                        $query->whereDate('date', $today);
+                                    })->get();
+
+        // Pisahkan tugas berdasarkan sumber
+        $systemTask = $assignedTasks->where('task.from_system', true);
+        $userTask = $assignedTasks->where('task.from_system', false);
+
+        // Kembalikan respons dengan struktur yang benar
         return response()->json([
             'status' => 'success',
             'data' => [
-                'system_task' => $systemTask->values(), // Jika kosong, tetap dikembalikan
-                'user_task' => $userTask->values(), //Jika kosong tetap dikembalikan
+                'system_task' => $systemTask->values(),
+                'user_task' => $userTask->values(),
             ]
         ], 200);
     }
