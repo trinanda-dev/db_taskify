@@ -203,24 +203,31 @@ class TaskController extends Controller
     {
         $karyawan = Karyawan::where('id_karyawan', $id)->first();
 
+        if(!$karyawan) {
+            return response()-> json([
+                'error' => 'Karyawan tidak ditemukan'
+            ], 404);
+        }
+
+        // Dapatkan tanggal hari ini
+        $today = Carbon::today();
+
         // Hitung tugas yang diselesaikan oleh karyawan ini
         $completedTasks = TaskAssignment::where('id_karyawan', $id)
                                     ->where('completed', true)
+                                    ->whereDate('updated_at', $today)
                                     ->count();
         
         // Hitung tugas yang belum diselesaikan oleh karyawan ini
         $incompleteTasks = TaskAssignment::where('id_karyawan', $id)
                                     ->where('completed', false)
+                                    ->whereDate('created_at', $today)
                                     ->count();
         
         return response()->json([
-            'nama' => $karyawan->nama,
-            'role' => $karyawan->role,
             'tugas_selesai' => $completedTasks,
             'tugas_belum_selesai' => $incompleteTasks
 
         ], 200);
     }
-
-
 }
