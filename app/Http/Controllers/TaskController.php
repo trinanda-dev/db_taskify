@@ -173,14 +173,19 @@ class TaskController extends Controller
 
         $dashboardData = [];
 
+        // Dapatkan tanggal hari ini
+        $today = Carbon::today();
+
         foreach ($karyawans as $karyawan) {
             // Filter tugas berdasarkan role karyawan
             $completedTasks = TaskAssignment::where('id_karyawan', $karyawan->id_karyawan)
                                             ->where('completed', true)
+                                            ->whereDate('updated_at', $today)
                                             ->count();
 
             $incompleteTasks = TaskAssignment::where('id_karyawan', $karyawan->id_karyawan)
                                             ->where('completed', false)
+                                            ->whereDate('updated_at', $today)
                                             ->count();
 
             $dashboardData[] = [
