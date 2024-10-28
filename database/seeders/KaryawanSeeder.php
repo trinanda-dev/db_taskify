@@ -99,6 +99,5 @@ class KaryawanSeeder extends Seeder
             'password' => '123', //Password tidak di hashing
         ]);
 
-
     }
 }

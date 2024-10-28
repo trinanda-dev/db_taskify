@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 // Login dan Logout
 Route::post('/login', [LoginController::class, 'login']); // Login user
 Route::post('/logout', [LoginController::class, 'logout'])->middleware('auth:sanctum'); // Logout user, dilindungi dengan middleware
+Route::post('/loginAdmin', [LoginController::class, 'loginAdmin']);
 
 // Semua route yang membutuhkan autentikasi dengan Sanctum
 Route::middleware('auth:sanctum')->group(function () {
