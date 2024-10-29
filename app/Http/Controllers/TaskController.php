@@ -16,15 +16,32 @@ class TaskController extends Controller
         // Mendapatkan karyawan yang sedang login
         $karyawan = $request->user();
 
-        // Mendapatkan tanggal hari ini
-        $today = Carbon::today()->format('Y-m-d');
+        // Mendapatkan tanggal, bulan, dan minggu saat ini
+        $todayDate = Carbon::today()->format('d'); // Hanya tanggal
+        $todayMonth = Carbon::today()->format('m'); // Hanya bulan
+        $currentWeek = Carbon::now()->weekOfMonth; // Minggu dalam bulan
 
-        // Mengambil semua tugas dari tabel Task yang sesuai dengan role karyawan yang login
+        // Mengambil semua tugas berdasarkan role karyawan yang login
         $tasks = Task::where('role', $karyawan->role)
-                    ->whereDate('date', $today)
+                    ->where(function($query) use ($todayDate, $todayMonth, $currentWeek) {
+                        // Tugas Harian: Berdasarkan hari tertentu
+                        $query->where('day', Carbon::now()->format('l')); // Contoh: "Monday"
+
+                        // Tugas Pertanggal: Berdasarkan `show_on_dates`
+                        $query->orWhereJsonContains('show_on_dates', $todayDate);
+
+                        // Tugas dengan Bulan Tertentu: Berdasarkan `show_on_dates` dan `show_on_months`
+                        $query->orWhere(function($q) use ($todayDate, $todayMonth) {
+                            $q->whereJsonContains('show_on_dates', $todayDate)
+                            ->whereJsonContains('show_on_months', $todayMonth);
+                        });
+
+                        // Tugas pada Minggu Tertentu: Berdasarkan `show_on_weeks`
+                        $query->orWhereJsonContains('show_on_weeks', $currentWeek);
+                    })
                     ->get();
 
-        // Lakukan iterasi ke semua tugas dan duplikasikan ke task_assignments jika belum ada
+        // Iterasi setiap tugas untuk dimasukkan ke `task_assignments` jika belum ada
         foreach ($tasks as $task) {
             $existingAssignment = TaskAssignment::where('task_id', $task->id)
                                                 ->where('id_karyawan', $karyawan->id_karyawan)
@@ -41,9 +58,8 @@ class TaskController extends Controller
         // Mengambil tugas-tugas yang telah diassign ke karyawan dari tabel TaskAssignment
         $assignedTasks = TaskAssignment::where('id_karyawan', $karyawan->id_karyawan)
                                     ->with('task') // Mengambil detail tugas dari Task
-                                    ->whereHas('task', function($query) use ($today) {
-                                        $query->whereDate('date', $today);
-                                    })->get();
+                                    ->select('id', 'task_id', 'completed')
+                                    ->get();
 
         // Pisahkan tugas berdasarkan sumber
         $systemTask = $assignedTasks->where('task.from_system', true);
@@ -59,27 +75,46 @@ class TaskController extends Controller
         ], 200);
     }
 
-    // Menambah tugas baru
+
     public function store(Request $request)
     {
+        // Validasi input
         $validated = $request->validate([
             'title' => 'required|string|max:255',
-            'date' => 'required|date',
+            'date' => 'nullable|date', // Tanggal opsional
+            'day' => 'nullable|string', // Untuk tugas harian
             'time' => 'required',
             'completed' => 'boolean',
+            'show_on_dates' => 'nullable|array', // Harus berupa array jika diberikan
+            'show_on_dates.*' => 'string', // Setiap item di dalam show_on_dates harus berupa string
+            'show_on_months' => 'nullable|array', // Harus berupa array jika diberikan
+            'show_on_months.*' => 'string' // Setiap item di dalam show_on_months harus berupa string
         ]);
 
         // Mendapatkan karyawan yang sedang login
-        $karyawan = $request->user(); // Pastikan ini adalah karyawan yang benar
+        $karyawan = $request->user();
 
-        // Set role sesuai dengan role karyawan yang sedang login
+        // Set nilai `from_system` dan `role` sesuai dengan karyawan yang sedang login
         $validated['from_system'] = false;
-        $validated['role'] = $karyawan->role; // Mengambil role karyawan yang sedang login
+        $validated['role'] = $karyawan->role;
 
-        // Buat tugas baru
+        // Encode `show_on_dates` dan `show_on_months` jika disediakan
+        if (isset($validated['show_on_dates'])) {
+            $validated['show_on_dates'] = json_encode($validated['show_on_dates']);
+        } else {
+            $validated['show_on_dates'] = null;
+        }
+
+        if (isset($validated['show_on_months'])) {
+            $validated['show_on_months'] = json_encode($validated['show_on_months']);
+        } else {
+            $validated['show_on_months'] = null;
+        }
+
+        // Buat tugas baru di tabel `tasks`
         $task = Task::create($validated);
 
-        // Buat entri di task_assignments untuk karyawan yang menambah tugas ini
+        // Buat entri di `task_assignments` untuk karyawan yang menambah tugas ini
         TaskAssignment::create([
             'task_id' => $task->id,
             'id_karyawan' => $karyawan->id_karyawan,

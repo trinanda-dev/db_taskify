@@ -18,7 +18,7 @@ class GudangJakartaSeeder extends Seeder
             // Tugas hari Senin
             [
                 'title' => 'Pisahkan resi sebelumnya yang belum selesai, packing dengan resi terbaru (Admin Gudang)',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -26,7 +26,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Perhatikan resi fisik setelah di print, quantity terpotong / tidak (Admin Gudang)',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -34,7 +34,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Seseuaikan jumlah resi fisik setelah di print dengan yang di email / software (Admin Gudang)',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -42,7 +42,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Pastikan tida ada scan double / resi double (Admin Gudang)',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -50,7 +50,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Saat penyerahan paket, wajib TTD kurir untuk memastikan nomer resi dan jumlah paket yang dibawa (Admin Gudang)',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -58,7 +58,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Penyelesaian barang retur info ke kantor (Admin Gudang)',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -66,7 +66,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Penyelesaian barang masuk & barang keluar, info ke kantor (Admin Gudang)',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -74,7 +74,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Buat surat jalan saat pengambilan barang jika tidak di ambil semuanya (Admin Gudang)',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -82,7 +82,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Follow up pekerjaan yang belum ke atasan setiap hari (Kepala Gudang)',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -90,7 +90,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Kontrol tidak ada resi yang tertinggal di tempat pengambilan barang (Kepala Gudang)',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -98,7 +98,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Sebelum pulang istirahat konfirmasi laporan pekerjaan, (cek resi apa saja yang belum selesai) (Kepala gudang, Wakil & admin)',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -106,7 +106,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Jika ada pengiriman yang tidak sempat, tidak terburu, tidak terantar konfirmasi ke atasan (Kepala gudang, Wakil & admin)',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -114,7 +114,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Kontrol semua bagian agar berjalan dengan baik & terselesaikan (Kepala gudang, Wakil & admin)',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -122,7 +122,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Kontrol tidak ada resi yang tertinggal di tempat pengambilan barang (Kepala gudang, Wakil & admin)',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -130,7 +130,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Membungkus pesanan konsumen (Packing)',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -138,7 +138,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Pastikan kembali untuk yang akan dipacking, dengan resi, tempat resi sesuai dengan yang dipacking (Packing)',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -146,7 +146,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Setelah packing letakkan pada wadah / keranjang per eksposisi / per kurir (Packing)',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -154,7 +154,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Merakit produk jika ada waktu luang (Packing)',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -162,7 +162,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Cek quantity barang pesanan konsumen dan sesuaikan dengan resi (resi tidak boleh cacat / terpotong) (Checker)',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -170,7 +170,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Cek quantity barang masuk (Checker)',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -178,7 +178,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Perhatikan benar-benar untuk pesanan dan quuantity barang jangan asal cepat dan siap (Checker)',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -186,7 +186,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Melingkari item di quantity jika sesuai (jangan asal) (Checker)',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -194,7 +194,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Mengambil produk yang di pesan konsumen (Picker)',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -202,7 +202,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Menyusun barang masuk ke gudang (Picker)',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -210,7 +210,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Perhatikan quantity pada resi saat pengambilan barang jika quantity resi terpotong / tidak jelas infokan ke admin (Picker)',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -218,7 +218,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Perhatikan item barang di resi saat pengambilan barang (Picker)',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -226,7 +226,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Mengisi barang kosong / kurang di rak (Picker)',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -234,7 +234,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Resi jangan diletakkan sembarangan tempat, saat belum di ambil barangnya (Picker)',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -244,7 +244,7 @@ class GudangJakartaSeeder extends Seeder
             // Tugas hari Selasa
             [
                 'title' => 'Pisahkan resi sebelumnya yang belum selesai, packing dengan resi terbaru (Admin Gudang)',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -252,7 +252,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Perhatikan resi fisik setelah di print, quantity terpotong / tidak (Admin Gudang)',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -260,7 +260,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Seseuaikan jumlah resi fisik setelah di print dengan yang di email / software (Admin Gudang)',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -268,7 +268,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Pastikan tida ada scan double / resi double (Admin Gudang)',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -276,7 +276,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Saat penyerahan paket, wajib TTD kurir untuk memastikan nomer resi dan jumlah paket yang dibawa (Admin Gudang)',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -284,7 +284,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Penyelesaian barang retur info ke kantor (Admin Gudang)',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -292,7 +292,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Penyelesaian barang masuk & barang keluar, info ke kantor (Admin Gudang)',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -300,7 +300,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Buat surat jalan saat pengambilan barang jika tidak di ambil semuanya (Admin Gudang)',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -308,7 +308,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Follow up pekerjaan yang belum ke atasan setiap hari (Kepala Gudang)',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -316,7 +316,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Kontrol tidak ada resi yang tertinggal di tempat pengambilan barang (Kepala Gudang)',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -324,7 +324,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Sebelum pulang istirahat konfirmasi laporan pekerjaan, (cek resi apa saja yang belum selesai) (Kepala gudang, Wakil & admin)',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -332,7 +332,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Jika ada pengiriman yang tidak sempat, tidak terburu, tidak terantar konfirmasi ke atasan (Kepala gudang, Wakil & admin)',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -340,7 +340,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Kontrol semua bagian agar berjalan dengan baik & terselesaikan (Kepala gudang, Wakil & admin)',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -348,7 +348,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Kontrol tidak ada resi yang tertinggal di tempat pengambilan barang (Kepala gudang, Wakil & admin)',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -356,7 +356,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Membungkus pesanan konsumen (Packing)',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -364,7 +364,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Pastikan kembali untuk yang akan dipacking, dengan resi, tempat resi sesuai dengan yang dipacking (Packing)',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -372,7 +372,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Setelah packing letakkan pada wadah / keranjang per eksposisi / per kurir (Packing)',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -380,7 +380,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Merakit produk jika ada waktu luang (Packing)',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -388,7 +388,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Cek quantity barang pesanan konsumen dan sesuaikan dengan resi (resi tidak boleh cacat / terpotong) (Checker)',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -396,7 +396,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Cek quantity barang masuk (Checker)',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -404,7 +404,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Perhatikan benar-benar untuk pesanan dan quuantity barang jangan asal cepat dan siap (Checker)',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -412,7 +412,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Melingkari item di quantity jika sesuai (jangan asal) (Checker)',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -420,7 +420,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Mengambil produk yang di pesan konsumen (Picker)',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -428,7 +428,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Menyusun barang masuk ke gudang (Picker)',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -436,7 +436,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Perhatikan quantity pada resi saat pengambilan barang jika quantity resi terpotong / tidak jelas infokan ke admin (Picker)',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -444,7 +444,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Perhatikan item barang di resi saat pengambilan barang (Picker)',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -452,7 +452,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Mengisi barang kosong / kurang di rak (Picker)',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -460,7 +460,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Resi jangan diletakkan sembarangan tempat, saat belum di ambil barangnya (Picker)',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -470,7 +470,7 @@ class GudangJakartaSeeder extends Seeder
             // Tugas hari Rabu
             [
                 'title' => 'Pisahkan resi sebelumnya yang belum selesai, packing dengan resi terbaru (Admin Gudang)',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -478,7 +478,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Perhatikan resi fisik setelah di print, quantity terpotong / tidak (Admin Gudang)',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -486,7 +486,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Seseuaikan jumlah resi fisik setelah di print dengan yang di email / software (Admin Gudang)',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -494,7 +494,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Pastikan tida ada scan double / resi double (Admin Gudang)',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -502,7 +502,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Saat penyerahan paket, wajib TTD kurir untuk memastikan nomer resi dan jumlah paket yang dibawa (Admin Gudang)',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -510,7 +510,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Penyelesaian barang retur info ke kantor (Admin Gudang)',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -518,7 +518,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Penyelesaian barang masuk & barang keluar, info ke kantor (Admin Gudang)',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -526,7 +526,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Buat surat jalan saat pengambilan barang jika tidak di ambil semuanya (Admin Gudang)',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -534,7 +534,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Follow up pekerjaan yang belum ke atasan setiap hari (Kepala Gudang)',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -542,7 +542,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Kontrol tidak ada resi yang tertinggal di tempat pengambilan barang (Kepala Gudang)',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -550,7 +550,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Sebelum pulang istirahat konfirmasi laporan pekerjaan, (cek resi apa saja yang belum selesai) (Kepala gudang, Wakil & admin)',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -558,7 +558,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Jika ada pengiriman yang tidak sempat, tidak terburu, tidak terantar konfirmasi ke atasan (Kepala gudang, Wakil & admin)',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -566,7 +566,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Kontrol semua bagian agar berjalan dengan baik & terselesaikan (Kepala gudang, Wakil & admin)',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -574,7 +574,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Kontrol tidak ada resi yang tertinggal di tempat pengambilan barang (Kepala gudang, Wakil & admin)',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -582,7 +582,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Membungkus pesanan konsumen (Packing)',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -590,7 +590,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Pastikan kembali untuk yang akan dipacking, dengan resi, tempat resi sesuai dengan yang dipacking (Packing)',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -598,7 +598,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Setelah packing letakkan pada wadah / keranjang per eksposisi / per kurir (Packing)',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -606,7 +606,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Merakit produk jika ada waktu luang (Packing)',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -614,7 +614,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Cek quantity barang pesanan konsumen dan sesuaikan dengan resi (resi tidak boleh cacat / terpotong) (Checker)',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -622,7 +622,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Cek quantity barang masuk (Checker)',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -630,7 +630,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Perhatikan benar-benar untuk pesanan dan quuantity barang jangan asal cepat dan siap (Checker)',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -638,7 +638,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Melingkari item di quantity jika sesuai (jangan asal) (Checker)',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -646,7 +646,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Mengambil produk yang di pesan konsumen (Picker)',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -654,7 +654,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Menyusun barang masuk ke gudang (Picker)',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -662,7 +662,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Perhatikan quantity pada resi saat pengambilan barang jika quantity resi terpotong / tidak jelas infokan ke admin (Picker)',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -670,7 +670,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Perhatikan item barang di resi saat pengambilan barang (Picker)',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -678,7 +678,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Mengisi barang kosong / kurang di rak (Picker)',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -686,7 +686,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Resi jangan diletakkan sembarangan tempat, saat belum di ambil barangnya (Picker)',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -696,7 +696,7 @@ class GudangJakartaSeeder extends Seeder
             // Tugas hari Kamis
             [
                 'title' => 'Pisahkan resi sebelumnya yang belum selesai, packing dengan resi terbaru (Admin Gudang)',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -704,7 +704,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Perhatikan resi fisik setelah di print, quantity terpotong / tidak (Admin Gudang)',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -712,7 +712,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Seseuaikan jumlah resi fisik setelah di print dengan yang di email / software (Admin Gudang)',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -720,7 +720,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Pastikan tida ada scan double / resi double (Admin Gudang)',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -728,7 +728,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Saat penyerahan paket, wajib TTD kurir untuk memastikan nomer resi dan jumlah paket yang dibawa (Admin Gudang)',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -736,7 +736,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Penyelesaian barang retur info ke kantor (Admin Gudang)',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -744,7 +744,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Penyelesaian barang masuk & barang keluar, info ke kantor (Admin Gudang)',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -752,7 +752,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Buat surat jalan saat pengambilan barang jika tidak di ambil semuanya (Admin Gudang)',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -760,7 +760,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Follow up pekerjaan yang belum ke atasan setiap hari (Kepala Gudang)',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -768,7 +768,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Kontrol tidak ada resi yang tertinggal di tempat pengambilan barang (Kepala Gudang)',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -776,7 +776,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Sebelum pulang istirahat konfirmasi laporan pekerjaan, (cek resi apa saja yang belum selesai) (Kepala gudang, Wakil & admin)',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -784,7 +784,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Jika ada pengiriman yang tidak sempat, tidak terburu, tidak terantar konfirmasi ke atasan (Kepala gudang, Wakil & admin)',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -792,7 +792,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Kontrol semua bagian agar berjalan dengan baik & terselesaikan (Kepala gudang, Wakil & admin)',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -800,7 +800,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Kontrol tidak ada resi yang tertinggal di tempat pengambilan barang (Kepala gudang, Wakil & admin)',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -808,7 +808,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Membungkus pesanan konsumen (Packing)',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -816,7 +816,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Pastikan kembali untuk yang akan dipacking, dengan resi, tempat resi sesuai dengan yang dipacking (Packing)',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -824,7 +824,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Setelah packing letakkan pada wadah / keranjang per eksposisi / per kurir (Packing)',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -832,7 +832,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Merakit produk jika ada waktu luang (Packing)',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -840,7 +840,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Cek quantity barang pesanan konsumen dan sesuaikan dengan resi (resi tidak boleh cacat / terpotong) (Checker)',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -848,7 +848,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Cek quantity barang masuk (Checker)',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -856,7 +856,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Perhatikan benar-benar untuk pesanan dan quuantity barang jangan asal cepat dan siap (Checker)',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -864,7 +864,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Melingkari item di quantity jika sesuai (jangan asal) (Checker)',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -872,7 +872,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Mengambil produk yang di pesan konsumen (Picker)',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -880,7 +880,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Menyusun barang masuk ke gudang (Picker)',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -888,7 +888,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Perhatikan quantity pada resi saat pengambilan barang jika quantity resi terpotong / tidak jelas infokan ke admin (Picker)',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -896,7 +896,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Perhatikan item barang di resi saat pengambilan barang (Picker)',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -904,7 +904,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Mengisi barang kosong / kurang di rak (Picker)',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -912,7 +912,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Resi jangan diletakkan sembarangan tempat, saat belum di ambil barangnya (Picker)',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -922,7 +922,7 @@ class GudangJakartaSeeder extends Seeder
             // Tugas hari Jumat
             [
                 'title' => 'Pisahkan resi sebelumnya yang belum selesai, packing dengan resi terbaru (Admin Gudang)',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -930,7 +930,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Perhatikan resi fisik setelah di print, quantity terpotong / tidak (Admin Gudang)',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -938,7 +938,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Seseuaikan jumlah resi fisik setelah di print dengan yang di email / software (Admin Gudang)',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -946,7 +946,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Pastikan tida ada scan double / resi double (Admin Gudang)',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -954,7 +954,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Saat penyerahan paket, wajib TTD kurir untuk memastikan nomer resi dan jumlah paket yang dibawa (Admin Gudang)',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -962,7 +962,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Penyelesaian barang retur info ke kantor (Admin Gudang)',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -970,7 +970,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Penyelesaian barang masuk & barang keluar, info ke kantor (Admin Gudang)',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -978,7 +978,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Buat surat jalan saat pengambilan barang jika tidak di ambil semuanya (Admin Gudang)',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -986,7 +986,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Follow up pekerjaan yang belum ke atasan setiap hari (Kepala Gudang)',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -994,7 +994,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Kontrol tidak ada resi yang tertinggal di tempat pengambilan barang (Kepala Gudang)',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1002,7 +1002,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Sebelum pulang istirahat konfirmasi laporan pekerjaan, (cek resi apa saja yang belum selesai) (Kepala gudang, Wakil & admin)',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1010,7 +1010,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Jika ada pengiriman yang tidak sempat, tidak terburu, tidak terantar konfirmasi ke atasan (Kepala gudang, Wakil & admin)',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1018,7 +1018,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Kontrol semua bagian agar berjalan dengan baik & terselesaikan (Kepala gudang, Wakil & admin)',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1026,7 +1026,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Kontrol tidak ada resi yang tertinggal di tempat pengambilan barang (Kepala gudang, Wakil & admin)',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1034,7 +1034,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Membungkus pesanan konsumen (Packing)',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1042,7 +1042,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Pastikan kembali untuk yang akan dipacking, dengan resi, tempat resi sesuai dengan yang dipacking (Packing)',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1050,7 +1050,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Setelah packing letakkan pada wadah / keranjang per eksposisi / per kurir (Packing)',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1058,7 +1058,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Merakit produk jika ada waktu luang (Packing)',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1066,7 +1066,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Cek quantity barang pesanan konsumen dan sesuaikan dengan resi (resi tidak boleh cacat / terpotong) (Checker)',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1074,7 +1074,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Cek quantity barang masuk (Checker)',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1082,7 +1082,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Perhatikan benar-benar untuk pesanan dan quuantity barang jangan asal cepat dan siap (Checker)',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1090,7 +1090,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Melingkari item di quantity jika sesuai (jangan asal) (Checker)',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1098,7 +1098,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Mengambil produk yang di pesan konsumen (Picker)',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1106,7 +1106,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Menyusun barang masuk ke gudang (Picker)',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1114,7 +1114,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Perhatikan quantity pada resi saat pengambilan barang jika quantity resi terpotong / tidak jelas infokan ke admin (Picker)',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1122,7 +1122,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Perhatikan item barang di resi saat pengambilan barang (Picker)',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1130,7 +1130,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Mengisi barang kosong / kurang di rak (Picker)',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1138,7 +1138,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Resi jangan diletakkan sembarangan tempat, saat belum di ambil barangnya (Picker)',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1148,7 +1148,7 @@ class GudangJakartaSeeder extends Seeder
             // Tugas hari Sabtu
             [
                 'title' => 'Pisahkan resi sebelumnya yang belum selesai, packing dengan resi terbaru (Admin Gudang)',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1156,7 +1156,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Perhatikan resi fisik setelah di print, quantity terpotong / tidak (Admin Gudang)',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1164,7 +1164,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Seseuaikan jumlah resi fisik setelah di print dengan yang di email / software (Admin Gudang)',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1172,7 +1172,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Pastikan tida ada scan double / resi double (Admin Gudang)',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1180,7 +1180,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Saat penyerahan paket, wajib TTD kurir untuk memastikan nomer resi dan jumlah paket yang dibawa (Admin Gudang)',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1188,7 +1188,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Penyelesaian barang retur info ke kantor (Admin Gudang)',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1196,7 +1196,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Penyelesaian barang masuk & barang keluar, info ke kantor (Admin Gudang)',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1204,7 +1204,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Buat surat jalan saat pengambilan barang jika tidak di ambil semuanya (Admin Gudang)',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1212,7 +1212,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Follow up pekerjaan yang belum ke atasan setiap hari (Kepala Gudang)',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1220,7 +1220,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Kontrol tidak ada resi yang tertinggal di tempat pengambilan barang (Kepala Gudang)',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1228,7 +1228,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Sebelum pulang istirahat konfirmasi laporan pekerjaan, (cek resi apa saja yang belum selesai) (Kepala gudang, Wakil & admin)',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1236,7 +1236,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Jika ada pengiriman yang tidak sempat, tidak terburu, tidak terantar konfirmasi ke atasan (Kepala gudang, Wakil & admin)',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1244,7 +1244,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Kontrol semua bagian agar berjalan dengan baik & terselesaikan (Kepala gudang, Wakil & admin)',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1252,7 +1252,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Kontrol tidak ada resi yang tertinggal di tempat pengambilan barang (Kepala gudang, Wakil & admin)',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1260,7 +1260,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Membungkus pesanan konsumen (Packing)',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1268,7 +1268,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Pastikan kembali untuk yang akan dipacking, dengan resi, tempat resi sesuai dengan yang dipacking (Packing)',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1276,7 +1276,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Setelah packing letakkan pada wadah / keranjang per eksposisi / per kurir (Packing)',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1284,7 +1284,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Merakit produk jika ada waktu luang (Packing)',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1292,7 +1292,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Cek quantity barang pesanan konsumen dan sesuaikan dengan resi (resi tidak boleh cacat / terpotong) (Checker)',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1300,7 +1300,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Cek quantity barang masuk (Checker)',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1308,7 +1308,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Perhatikan benar-benar untuk pesanan dan quuantity barang jangan asal cepat dan siap (Checker)',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1316,7 +1316,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Melingkari item di quantity jika sesuai (jangan asal) (Checker)',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1324,7 +1324,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Mengambil produk yang di pesan konsumen (Picker)',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1332,7 +1332,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Menyusun barang masuk ke gudang (Picker)',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1340,7 +1340,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Perhatikan quantity pada resi saat pengambilan barang jika quantity resi terpotong / tidak jelas infokan ke admin (Picker)',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1348,7 +1348,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Perhatikan item barang di resi saat pengambilan barang (Picker)',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1356,7 +1356,7 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Mengisi barang kosong / kurang di rak (Picker)',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1364,12 +1364,15 @@ class GudangJakartaSeeder extends Seeder
             ],
             [
                 'title' => 'Resi jangan diletakkan sembarangan tempat, saat belum di ambil barangnya (Picker)',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
                 'role' => 'Gudang Jakarta',
             ],
         ];
+
+        // Insert the tasks into the database
+        DB::table('tasks')->insert($taskgudangjakarta);
     }
 }

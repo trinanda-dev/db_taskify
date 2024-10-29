@@ -89,7 +89,7 @@ class LoginController extends Controller
         }
 
         // Periksa apakaj karyawan memiliki role "Admin"
-        if ($karyawan->role !=="Admin") {
+        if ($karyawan->role !=="IT Support") {
             return response()->json([
                 'status' => 'error',
                 'message' => 'Anda Tidak Diautorisasi Untuk Masuk Ke Halaman ini'

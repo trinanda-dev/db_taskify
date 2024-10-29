@@ -15,13 +15,11 @@ class TaskAdminSaleSeeders extends Seeder
     public function run(): void
     {
         $tasksadminsale = [];
-
-        
-        $tasksadminsale[] = [
+        $tasksadminsale = [
             // Tugas untuk hari senin
             [
                 'title' => 'Pengecekan buku catatan harian siang dan sore',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -29,7 +27,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Penyelesaian pencatatan yang belum selesai siang dan sore, wajib dicatat setiap penyampaian tugas maupun bukan',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -37,7 +35,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Konsultasi dengan atasan bila ada kendala atau apa yang belum terselesaikan & follow up tugas yang tidak terselesaikan ke atasan, (pagi, siang, sore)',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -45,7 +43,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek piutang yang harus ditagih (jatuh tempo)',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -53,7 +51,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Foto nota piutang (tagihan via online)',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -61,7 +59,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Pisahkan nota  < 5 hari jatuh tempo',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -69,7 +67,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Penagihan piutang dan kontrol',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -77,7 +75,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek olshop yang mau terbatalkan / tidak terproses siang & sore',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -85,7 +83,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Penyelesaian piutang olshop bermasalah dan lebih dari 2 minggu & piutang offline lewat masa tenggang',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -93,7 +91,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Shopee, Tokopedia, Lazada dilaporkan ke atasan jika ada kendala (pengembalian)',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -101,7 +99,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek pengembalian Shopee, Lazada, Tokopedia yang baru & dalam proses',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -109,7 +107,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Konfirmasi via telp jika ada perubahan nama item untuk Gudang Jakarta dan Bintan',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -117,7 +115,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Penutupan buku (penerimaan piutang)',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -125,7 +123,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Input nota, info barang kosong, persiapan nota invoice pengantaran',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -133,7 +131,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Nota marketplace dikirim kurang lebih jam 11.00',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -141,7 +139,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Buat nota / invoice antar cabang (penjualan)',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -149,7 +147,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Untuk admin penjualan SO penjualan di selesaikan di hari ini juga, jika terdapat kendala konfirmasi ke atasan',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -157,7 +155,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Setiap data wajib email (arsip)',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -165,7 +163,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Input piutang',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -173,7 +171,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek piutang, sesuaikan fisik invoice piutang dengan komputer',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -181,7 +179,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek & selesaikan min-max pesaan Shopee, Lazada, Tokopedia, jika terdapat kendala lakukan konfirmasi ke atasan (piutang marketplace)',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -189,7 +187,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Metting ke MGR piutang tidak selesai / bermasalah (senin pagi) perminggu',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -197,7 +195,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek nota yang sudah di print hari ini, cek saat nota sudah selesai sore/pagi',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -205,7 +203,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Print email masuk hari sebelumnya',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -213,7 +211,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Nota retur marketplace / pengembalian / pembatalan',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -221,7 +219,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Surat jalan offline dan online',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -229,7 +227,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Hapus barang kosong, baran pengembalian online setiap hari (retur)',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -237,7 +235,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Setiap permasalahan pengiriman, wajib diinfokan secara tertulis (gudang Jakarta)',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -245,7 +243,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Input nota retur offline (cek diskon sebelumnya, input no inv & keterangan retur)',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -253,7 +251,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Setiap akan membuka nota retur, harus dengan ACC & ditandatangani oleh atasan (hapus nota salah input, edit salah order dll)',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -261,7 +259,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Import penjualan marketplace ke GF Akuntansi wajib diselesaikan setiap hari',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -269,7 +267,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Setor ke bank Senin-Jumat',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -277,7 +275,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Input pembayaran hutang',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -285,7 +283,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Laporan balance kas',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -293,7 +291,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Untuk kebun sendiri harus ttd di surat jalan kak axia / bang aming',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -301,7 +299,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Biaya untuk iklan Shopee tidak boleh lebih dari 10%, jika lebih kabari langsung ke atasan',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -309,7 +307,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Pengembalian maksimal 20.000, Acc boss pengembalian dana saja tidak perlu pengembalian barang',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -317,7 +315,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek pekerjaan admin Faraco, Bintan & Gudang',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -325,7 +323,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Pindah gudang Batam setiap hari Selasa & Jumat, kecuali urgent',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -333,7 +331,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Jika ada yang TF kurang dari 20.000 dibuat saja diskon Acc Boss 12/06/24',
-                'date' => Carbon::now()->next('Monday')->format('Y-m-d'),
+                'day' => 'Monday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -344,7 +342,7 @@ class TaskAdminSaleSeeders extends Seeder
             // Tugas hari selasa
             [
                 'title' => 'Pengecekan buku catatan harian siang dan sore',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -352,7 +350,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Penyelesaian pencatatan yang belum selesai siang dan sore, wajib dicatat setiap penyampaian tugas maupun bukan',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -360,7 +358,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Konsultasi dengan atasan bila ada kendala atau apa yang belum terselesaikan & follow up tugas yang tidak terselesaikan ke atasan, (pagi, siang, sore)',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -368,7 +366,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek piutang yang harus ditagih (jatuh tempo)',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -376,7 +374,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Foto nota piutang (tagihan via online)',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -384,7 +382,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Pisahkan nota < 5 hari jatuh tempo',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -392,7 +390,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Penagihan piutang dan kontrol',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -400,7 +398,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek olshop yang mau terbatalkan / tidak terproses siang & sore',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -408,7 +406,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Penyelesaian piutang olshop bermasalah dan lebih dari 2 minggu & piutang offline lewat masa tenggang',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -416,7 +414,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Shopee, Tokopedia, Lazada dilaporkan ke atasan jika ada kendala (pengembalian)',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -424,7 +422,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek pengembalian Shopee, Lazada, Tokopedia yang baru & dalam proses',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -432,7 +430,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Konfirmasi via telp jika ada perubahan nama item untuk Gudang Jakarta dan Bintan',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -440,7 +438,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Penutupan buku (penerimaan piutang)',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -448,7 +446,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Input nota, info barang kosong, persiapan nota invoice pengantaran',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -456,7 +454,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Nota marketplace dikirim kurang lebih jam 11.00',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -464,7 +462,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Buat nota / invoice antar cabang (penjualan)',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -472,7 +470,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Untuk admin penjualan SO penjualan di selesaikan di hari ini juga, jika terdapat kendala konfirmasi ke atasan',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -480,7 +478,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Setiap data wajib email (arsip)',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -488,7 +486,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Input piutang',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -496,7 +494,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek piutang, sesuaikan fisik invoice piutang dengan komputer',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -504,7 +502,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek & selesaikan min-max pesaan Shopee, Lazada, Tokopedia, jika terdapat kendala lakukan konfirmasi ke atasan (piutang marketplace)',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -512,7 +510,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Metting ke MGR piutang tidak selesai / bermasalah (senin pagi) perminggu',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -520,7 +518,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek nota yang sudah di print hari ini, cek saat nota sudah selesai sore/pagi',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -528,7 +526,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Print email masuk hari sebelumnya',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -536,7 +534,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Nota retur marketplace / pengembalian / pembatalan',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -544,7 +542,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Surat jalan offline dan online',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -552,7 +550,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Hapus barang kosong, baran pengembalian online setiap hari (retur)',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -560,7 +558,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Setiap permasalahan pengiriman, wajib diinfokan secara tertulis (gudang Jakarta)',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -568,7 +566,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Input nota retur offline (cek diskon sebelumnya, input no inv & keterangan retur)',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -576,7 +574,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Setiap akan membuka nota retur, harus dengan ACC & ditandatangani oleh atasan (hapus nota salah input, edit salah order dll)',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -584,7 +582,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Import penjualan marketplace ke GF Akuntansi wajib diselesaikan setiap hari',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -592,7 +590,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Setor ke bank Senin-Jumat',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -600,7 +598,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Input pembayaran hutang',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -608,7 +606,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Laporan balance kas',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -616,7 +614,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Untuk kebun sendiri harus ttd di surat jalan kak axia / bang aming',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -624,7 +622,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Biaya untuk iklan Shopee tidak boleh lebih dari 10%, jika lebih kabari langsung ke atasan',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -632,7 +630,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Pengembalian maksimal 20.000, Acc boss pengembalian dana saja tidak perlu pengembalian barang',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -640,7 +638,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek pekerjaan admin Faraco, Bintan & Gudang',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -648,7 +646,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Pindah gudang Batam setiap hari Selasa & Jumat, kecuali urgent',
-                'date' => Carbon::now()->next('Tuesday')->format('Y-m-d'),
+                'day' => 'Tuesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -658,7 +656,7 @@ class TaskAdminSaleSeeders extends Seeder
             // Tugas Hari Rabu
             [
                 'title' => 'Pengecekan buku catatan harian siang dan sore',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -666,7 +664,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Penyelesaian pencatatan yang belum selesai siang dan sore, wajib dicatat setiap penyampaian tugas maupun bukan',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -674,7 +672,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Konsultasi dengan atasan bila ada kendala atau apa yang belum terselesaikan & follow up tugas yang tidak terselesaikan ke atasan, (pagi, siang, sore)',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -682,7 +680,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek piutang yang harus ditagih (jatuh tempo)',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -690,7 +688,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Foto nota piutang (tagihan via online)',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -698,7 +696,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Pisahkan nota < 5 hari jatuh tempo',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -706,7 +704,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Penagihan piutang dan kontrol',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -714,7 +712,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek olshop yang mau terbatalkan / tidak terproses siang & sore',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -722,7 +720,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Penyelesaian piutang olshop bermasalah dan lebih dari 2 minggu & piutang offline lewat masa tenggang',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -730,7 +728,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Shopee, Tokopedia, Lazada dilaporkan ke atasan jika ada kendala (pengembalian)',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -738,7 +736,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek pengembalian Shopee, Lazada, Tokopedia yang baru & dalam proses',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -746,7 +744,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Konfirmasi via telp jika ada perubahan nama item untuk Gudang Jakarta dan Bintan',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -754,7 +752,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Penutupan buku (penerimaan piutang)',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -762,7 +760,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Input nota, info barang kosong, persiapan nota invoice pengantaran',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -770,7 +768,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Nota marketplace dikirim kurang lebih jam 11.00',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -778,7 +776,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Buat nota / invoice antar cabang (penjualan)',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -786,7 +784,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Untuk admin penjualan SO penjualan di selesaikan di hari ini juga, jika terdapat kendala konfirmasi ke atasan',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -794,7 +792,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Setiap data wajib email (arsip)',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -802,7 +800,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Input piutang',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -810,7 +808,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek piutang, sesuaikan fisik invoice piutang dengan komputer',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -818,7 +816,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek & selesaikan min-max pesaan Shopee, Lazada, Tokopedia, jika terdapat kendala lakukan konfirmasi ke atasan (piutang marketplace)',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -826,7 +824,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Metting ke MGR piutang tidak selesai / bermasalah (senin pagi) perminggu',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -834,7 +832,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek nota yang sudah di print hari ini, cek saat nota sudah selesai sore/pagi',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -842,7 +840,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Print email masuk hari sebelumnya',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -850,7 +848,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Nota retur marketplace / pengembalian / pembatalan',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -858,7 +856,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Surat jalan offline dan online',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -866,7 +864,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Hapus barang kosong, baran pengembalian online setiap hari (retur)',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -874,7 +872,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Setiap permasalahan pengiriman, wajib diinfokan secara tertulis (gudang Jakarta)',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -882,7 +880,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Input nota retur offline (cek diskon sebelumnya, input no inv & keterangan retur)',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -890,7 +888,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Setiap akan membuka nota retur, harus dengan ACC & ditandatangani oleh atasan (hapus nota salah input, edit salah order dll)',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -898,7 +896,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Import penjualan marketplace ke GF Akuntansi wajib diselesaikan setiap hari',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -906,7 +904,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Setor ke bank Senin-Jumat',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -914,7 +912,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Input pembayaran hutang',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -922,7 +920,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Laporan balance kas',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -930,7 +928,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Untuk kebun sendiri harus ttd di surat jalan kak axia / bang aming',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -938,7 +936,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Biaya untuk iklan Shopee tidak boleh lebih dari 10%, jika lebih kabari langsung ke atasan',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -946,7 +944,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Pengembalian maksimal 20.000, Acc boss pengembalian dana saja tidak perlu pengembalian barang',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -954,7 +952,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek pekerjaan admin Faraco, Bintan & Gudang',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -962,7 +960,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Pindah gudang Batam setiap hari Selasa & Jumat, kecuali urgent',
-                'date' => Carbon::now()->next('Wednesday')->format('Y-m-d'),
+                'day' => 'Wednesday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -972,7 +970,7 @@ class TaskAdminSaleSeeders extends Seeder
             // Tugas Hari Kamis
             [
                 'title' => 'Pengecekan buku catatan harian siang dan sore',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -980,7 +978,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Penyelesaian pencatatan yang belum selesai siang dan sore, wajib dicatat setiap penyampaian tugas maupun bukan',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -988,7 +986,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Konsultasi dengan atasan bila ada kendala atau apa yang belum terselesaikan & follow up tugas yang tidak terselesaikan ke atasan, (pagi, siang, sore)',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -996,7 +994,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek piutang yang harus ditagih (jatuh tempo)',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1004,7 +1002,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Foto nota piutang (tagihan via online)',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1012,7 +1010,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Pisahkan nota < 5 hari jatuh tempo',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1020,7 +1018,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Penagihan piutang dan kontrol',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1028,7 +1026,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek olshop yang mau terbatalkan / tidak terproses siang & sore',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1036,7 +1034,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Penyelesaian piutang olshop bermasalah dan lebih dari 2 minggu & piutang offline lewat masa tenggang',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1044,7 +1042,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Shopee, Tokopedia, Lazada dilaporkan ke atasan jika ada kendala (pengembalian)',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1052,7 +1050,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek pengembalian Shopee, Lazada, Tokopedia yang baru & dalam proses',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1060,7 +1058,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Konfirmasi via telp jika ada perubahan nama item untuk Gudang Jakarta dan Bintan',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1068,7 +1066,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Penutupan buku (penerimaan piutang)',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1076,7 +1074,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Input nota, info barang kosong, persiapan nota invoice pengantaran',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1084,7 +1082,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Nota marketplace dikirim kurang lebih jam 11.00',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1092,7 +1090,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Buat nota / invoice antar cabang (penjualan)',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1100,7 +1098,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Untuk admin penjualan SO penjualan di selesaikan di hari ini juga, jika terdapat kendala konfirmasi ke atasan',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1108,7 +1106,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Setiap data wajib email (arsip)',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1116,7 +1114,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Input piutang',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1124,7 +1122,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek piutang, sesuaikan fisik invoice piutang dengan komputer',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1132,7 +1130,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek & selesaikan min-max pesaan Shopee, Lazada, Tokopedia, jika terdapat kendala lakukan konfirmasi ke atasan (piutang marketplace)',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1140,7 +1138,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Metting ke MGR piutang tidak selesai / bermasalah (senin pagi) perminggu',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1148,7 +1146,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek nota yang sudah di print hari ini, cek saat nota sudah selesai sore/pagi',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1156,7 +1154,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Print emai masuk hari sebelumnya',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1164,7 +1162,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Nota retur marketplace / pengembalian / pembatalan',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1172,7 +1170,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Surat jalan offline dan online',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1180,7 +1178,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Hapus barang kosong, baran pengembalian online setiap hari (retur)',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1188,7 +1186,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Setiap permasalahan pengiriman, wajib diinfokan secara tertulis (gudang Jakarta)',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1196,7 +1194,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Input nota retur offline (cek diskon sebelumnya, input no inv & keterangan retur)',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1204,7 +1202,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Setiap akan membuka nota retur, harus dengan ACC & ditandatangani oleh atasan (hapus nota salah input, edit salah order dll)',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1212,7 +1210,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Import penjualan marketplace ke GF Akuntansi wajib diselesaikan setiap hari',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1220,7 +1218,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Setor ke bank Senin-Jumat',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1228,7 +1226,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Input pembayaran hutang',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1236,7 +1234,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Laporan balance kas',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1244,7 +1242,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Untuk kebun sendiri harus ttd di surat jalan kak axia / bang aming',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1252,7 +1250,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Biaya untuk iklan Shopee tidak boleh lebih dari 10%, jika lebih kabari langsung ke atasan',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1260,7 +1258,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Pengembalian maksimal 20.000, Acc boss pengembalian dana saja tidak perlu pengembalian barang',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1268,7 +1266,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek pekerjaan admin Faraco, Bintan & Gudang',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1276,7 +1274,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Pindah gudang Batam setiap hari Selasa & Jumat, kecuali urgent',
-                'date' => Carbon::now()->next('Thursday')->format('Y-m-d'),
+                'day' => 'Thursday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1286,7 +1284,7 @@ class TaskAdminSaleSeeders extends Seeder
             // Tugas hari Jumat
             [
                 'title' => 'Pengecekan buku catatan harian siang dan sore',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1294,7 +1292,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Penyelesaian pencatatan yang belum selesai siang dan sore, wajib dicatat setiap penyampaian tugas maupun bukan',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1302,7 +1300,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Konsultasi dengan atasan bila ada kendala atau apa yang belum terselesaikan & follow up tugas yang tidak terselesaikan ke atasan, (pagi, siang, sore)',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1310,7 +1308,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek piutang yang harus ditagih (jatuh tempo)',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1318,7 +1316,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Foto nota piutang (tagihan via online)',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1326,7 +1324,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Pisahkan nota < 5 hari jatuh tempo',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1334,7 +1332,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Penagihan piutang dan kontrol',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1342,7 +1340,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek olshop yang mau terbatalkan / tidak terproses siang & sore',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1350,7 +1348,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Penyelesaian piutang olshop bermasalah dan lebih dari 2 minggu & piutang offline lewat masa tenggang',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1358,7 +1356,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Shopee, Tokopedia, Lazada dilaporkan ke atasan jika ada kendala (pengembalian)',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1366,7 +1364,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek pengembalian Shopee, Lazada, Tokopedia yang baru & dalam proses',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1374,7 +1372,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Konfirmasi via telp jika ada perubahan nama item untuk Gudang Jakarta dan Bintan',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1382,7 +1380,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Penutupan buku (penerimaan piutang)',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1390,7 +1388,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Input nota, info barang kosong, persiapan nota invoice pengantaran',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1398,7 +1396,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Nota marketplace dikirim kurang lebih jam 11.00',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1406,7 +1404,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Buat nota / invoice antar cabang (penjualan)',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1414,7 +1412,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Untuk admin penjualan SO penjualan di selesaikan di hari ini juga, jika terdapat kendala konfirmasi ke atasan',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1422,7 +1420,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Setiap data wajib email (arsip)',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1430,7 +1428,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Input piutang',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1438,7 +1436,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek piutang, sesuaikan fisik invoice piutang dengan komputer',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1446,7 +1444,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek & selesaikan min-max pesaan Shopee, Lazada, Tokopedia, jika terdapat kendala lakukan konfirmasi ke atasan (piutang marketplace)',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1454,7 +1452,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Metting ke MGR piutang tidak selesai / bermasalah (senin pagi) perminggu',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1462,7 +1460,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek nota yang sudah di print hari ini, cek saat nota sudah selesai sore/pagi',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1470,7 +1468,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Print emai masuk hari sebelumnya',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1478,7 +1476,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Nota retur marketplace / pengembalian / pembatalan',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1486,7 +1484,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Surat jalan offline dan online',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1494,7 +1492,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Hapus barang kosong, baran pengembalian online setiap hari (retur)',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1502,7 +1500,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Setiap permasalahan pengiriman, wajib diinfokan secara tertulis (gudang Jakarta)',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1510,7 +1508,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Input nota retur offline (cek diskon sebelumnya, input no inv & keterangan retur)',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1518,7 +1516,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Setiap akan membuka nota retur, harus dengan ACC & ditandatangani oleh atasan (hapus nota salah input, edit salah order dll)',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1526,7 +1524,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Import penjualan marketplace ke GF Akuntansi wajib diselesaikan setiap hari',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1534,7 +1532,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Setor ke bank Senin-Jumat',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1542,7 +1540,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Input pembayaran hutang',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1550,7 +1548,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Laporan balance kas',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1558,7 +1556,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Untuk kebun sendiri harus ttd di surat jalan kak axia / bang aming',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1566,7 +1564,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Biaya untuk iklan Shopee tidak boleh lebih dari 10%, jika lebih kabari langsung ke atasan',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1574,7 +1572,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Pengembalian maksimal 20.000, Acc boss pengembalian dana saja tidak perlu pengembalian barang',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1582,7 +1580,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek pekerjaan admin Faraco, Bintan & Gudang',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1590,7 +1588,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Pindah gudang Batam setiap hari Selasa & Jumat, kecuali urgent',
-                'date' => Carbon::now()->next('Friday')->format('Y-m-d'),
+                'day' => 'Friday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1600,7 +1598,7 @@ class TaskAdminSaleSeeders extends Seeder
             // Tugas hari Sabtu
             [
                 'title' => 'Pengecekan buku catatan harian siang dan sore',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1608,7 +1606,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Penyelesaian pencatatan yang belum selesai siang dan sore, wajib dicatat setiap penyampaian tugas maupun bukan',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1616,7 +1614,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Konsultasi dengan atasan bila ada kendala atau apa yang belum terselesaikan & follow up tugas yang tidak terselesaikan ke atasan, (pagi, siang, sore)',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1624,7 +1622,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek piutang yang harus ditagih (jatuh tempo)',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1632,7 +1630,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Foto nota piutang (tagihan via online)',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1640,7 +1638,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Pisahkan nota < 5 hari jatuh tempo',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1648,7 +1646,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Penagihan piutang dan kontrol',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1656,7 +1654,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek olshop yang mau terbatalkan / tidak terproses siang & sore',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1664,7 +1662,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Penyelesaian piutang olshop bermasalah dan lebih dari 2 minggu & piutang offline lewat masa tenggang',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1672,7 +1670,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Shopee, Tokopedia, Lazada dilaporkan ke atasan jika ada kendala (pengembalian)',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1680,7 +1678,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek pengembalian Shopee, Lazada, Tokopedia yang baru & dalam proses',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1688,7 +1686,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Konfirmasi via telp jika ada perubahan nama item untuk Gudang Jakarta dan Bintan',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1696,7 +1694,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Penutupan buku (penerimaan piutang)',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1704,7 +1702,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Input nota, info barang kosong, persiapan nota invoice pengantaran',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1712,7 +1710,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Nota marketplace dikirim kurang lebih jam 11.00',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1720,7 +1718,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Buat nota / invoice antar cabang (penjualan)',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1728,7 +1726,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Untuk admin penjualan SO penjualan di selesaikan di hari ini juga, jika terdapat kendala konfirmasi ke atasan',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1736,7 +1734,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Setiap data wajib email (arsip)',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1744,7 +1742,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Input piutang',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1752,7 +1750,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek piutang, sesuaikan fisik invoice piutang dengan komputer',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1760,7 +1758,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek & selesaikan min-max pesaan Shopee, Lazada, Tokopedia, jika terdapat kendala lakukan konfirmasi ke atasan (piutang marketplace)',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1768,7 +1766,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Metting ke MGR piutang tidak selesai / bermasalah (senin pagi) perminggu',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1776,7 +1774,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek nota yang sudah di print hari ini, cek saat nota sudah selesai sore/pagi',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1784,7 +1782,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Print emai masuk hari sebelumnya',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1792,7 +1790,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Nota retur marketplace / pengembalian / pembatalan',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1800,7 +1798,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Surat jalan offline dan online',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1808,7 +1806,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Hapus barang kosong, baran pengembalian online setiap hari (retur)',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1816,7 +1814,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Setiap permasalahan pengiriman, wajib diinfokan secara tertulis (gudang Jakarta)',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1824,7 +1822,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Input nota retur offline (cek diskon sebelumnya, input no inv & keterangan retur)',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1832,7 +1830,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Setiap akan membuka nota retur, harus dengan ACC & ditandatangani oleh atasan (hapus nota salah input, edit salah order dll)',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1840,7 +1838,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Import penjualan marketplace ke GF Akuntansi wajib diselesaikan setiap hari',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1848,7 +1846,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Setor ke bank Senin-Jumat',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1856,7 +1854,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Input pembayaran hutang',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1864,7 +1862,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Laporan balance kas',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1872,7 +1870,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Untuk kebun sendiri harus ttd di surat jalan kak axia / bang aming',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1880,7 +1878,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Biaya untuk iklan Shopee tidak boleh lebih dari 10%, jika lebih kabari langsung ke atasan',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1888,7 +1886,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Pengembalian maksimal 20.000, Acc boss pengembalian dana saja tidak perlu pengembalian barang',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1896,7 +1894,7 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Cek pekerjaan admin Faraco, Bintan & Gudang',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
@@ -1904,40 +1902,13 @@ class TaskAdminSaleSeeders extends Seeder
             ],
             [
                 'title' => 'Pindah gudang Batam setiap hari Selasa & Jumat, kecuali urgent',
-                'date' => Carbon::now()->next('Saturday')->format('Y-m-d'),
+                'day' => 'Saturday',
                 'time' => '08:00:00',
                 'completed' => false,
                 'from_system' => true,
                 'role' => 'Admin Sale',
             ],
         ];
-
-        // Mendapatkan tanggal hari ini
-        $today = Carbon::now()->format('d'); // Mengambil tanggal format dua digit
-
-        // Tugas yang muncul setiap tanggal 1-3
-        if (in_array($today, ['01', '02', '03'])) {
-            $tasksadminsale[] = [
-                'title' => 'Print Bonus Maraco',
-                'date' => Carbon::now()->format('Y-m-d'),
-                'time' => '08:00:00',
-                'completed' => false,
-                'from_system'  => true,
-                'role' => 'Admin Sale'
-            ];
-        }
-
-        // Tugas yang muncul setiap tanggal 2-4
-        if(in_array($today, ['02', '03', '04'])) {
-            $tasksadminsale[] = [
-                'title' => 'Sesuaikan fisik invoice piutang dengan GF Akuntansi',
-                'date' => Carbon::now()->format('Y-m-d'),
-                'time' => '08:00:00',
-                'completed' => false,
-                'from_system' => true,
-                'role' => 'Admin Sale'
-            ];
-        }
 
         // Insert the tasks into the database
         DB::table('tasks')->insert($tasksadminsale);

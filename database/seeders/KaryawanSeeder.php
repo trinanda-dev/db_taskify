@@ -15,87 +15,137 @@ class KaryawanSeeder extends Seeder
     public function run(): void
     {
         Karyawan::create([
-            'id_karyawan' => '0000000001',
-            'nama' => 'Joko Wijaya',
+            'id_karyawan' => '00000001',
+            'nama' => 'Sari',
             'role' => 'Manajemen',
             'password' => '123', //Password tidak di hashing
         ]);
 
 
         Karyawan::create([
-            'id_karyawan' => '0000000002',
-            'nama' => 'JokoPra',
+            'id_karyawan' => '00000003',
+            'nama' => 'Nurul',
+            'role' => 'Admin Marketing',
+            'password' => '123', //Password tidak di hashing
+        ]);
+
+        Karyawan::create([
+            'id_karyawan' => '00000004',
+            'nama' => 'Anis',
+            'role' => 'Admin Marketing',
+            'password' => '123', //Password tidak di hashing
+        ]);
+
+        Karyawan::create([
+            'id_karyawan' => '00000005',
+            'nama' => 'Saris',
+            'role' => 'Admin Marketing',
+            'password' => '123', //Password tidak di hashing
+        ]);
+
+        Karyawan::create([
+            'id_karyawan' => '00000006',
+            'nama' => 'Misi',
+            'role' => 'Admin Marketing',
+            'password' => '123', //Password tidak di hashing
+        ]);
+
+        Karyawan::create([
+            'id_karyawan' => '00000007',
+            'nama' => 'Delvi',
+            'role' => 'Admin Pembelian',
+            'password' => '123', //Password tidak di hashing
+        ]);
+
+        Karyawan::create([
+            'id_karyawan' => '00000008',
+            'nama' => 'Zila',
+            'role' => 'Admin Pembelian',
+            'password' => '123', //Password tidak di hashing
+        ]);
+
+        Karyawan::create([
+            'id_karyawan' => '00000010',
+            'nama' => 'Tata',
+            'role' => 'Admin Pembelian',
+            'password' => '123', //Password tidak di hashing
+        ]);
+
+        Karyawan::create([
+            'id_karyawan' => '000000011',
+            'nama' => 'Mala',
+            'role' => 'Admin Sale',
+            'password' => '123', //Password tidak di hashing
+        ]);
+
+        Karyawan::create([
+            'id_karyawan' => '00000012',
+            'nama' => 'Agung',
+            'role' => 'Kepala Toko',
+            'password' => '123', //Password tidak di hashing
+        ]);
+
+        Karyawan::create([
+            'id_karyawan' => '00000013',
+            'nama' => 'Egi',
+            'role' => 'Toko Tani Makmur',
+            'password' => '123', //Password tidak di hashing
+        ]);
+
+
+        Karyawan::create([
+            'id_karyawan' => '00000016',
+            'nama' => 'Rohmah',
+            'role' => 'Admin Marketing',
+            'password' => '123', //Password tidak di hashing
+        ]);
+
+        Karyawan::create([
+            'id_karyawan' => '00000017',
+            'nama' => 'Siti',
+            'role' => 'Admin Sale',
+            'password' => '123', //Password tidak di hashing
+        ]);
+
+        Karyawan::create([
+            'id_karyawan' => '00000018',
+            'nama' => 'Risda',
+            'role' => 'Admin Marketing',
+            'password' => '123', //Password tidak di hashing
+        ]);
+
+        Karyawan::create([
+            'id_karyawan' => '00000020',
+            'nama' => 'Susan',
+            'role' => 'Admin Pembelian',
+            'password' => '123', //Password tidak di hashing
+        ]);
+
+        Karyawan::create([
+            'id_karyawan' => '00000022',
+            'nama' => 'Dian',
+            'role' => 'Toko Tani Makmur',
+            'password' => '123', //Password tidak di hashing
+        ]);
+
+        Karyawan::create([
+            'id_karyawan' => '00000023',
+            'nama' => 'Adhi',
+            'role' => 'Designer',
+            'password' => '123', //Password tidak di hashing
+        ]);
+
+        Karyawan::create([
+            'id_karyawan' => '00000025',
+            'nama' => 'Tiya',
             'role' => 'Manajemen',
             'password' => '123', //Password tidak di hashing
         ]);
 
         Karyawan::create([
-            'id_karyawan' => '0000000003',
-            'nama' => 'ProJo',
-            'role' => 'Admin Marketing',
-            'password' => '123', //Password tidak di hashing
-        ]);
-
-        Karyawan::create([
-            'id_karyawan' => '0000000004',
-            'nama' => 'Ganjar Baswedan',
-            'role' => 'Admin Marketing',
-            'password' => '123', //Password tidak di hashing
-        ]);
-
-        Karyawan::create([
-            'id_karyawan' => '0000000005',
-            'nama' => 'Anis Rakabuming',
-            'role' => 'Admin Sale',
-            'password' => '123', //Password tidak di hashing
-        ]);
-
-        Karyawan::create([
-            'id_karyawan' => '0000000006',
-            'nama' => 'Fufufafa',
-            'role' => 'Admin Sale',
-            'password' => '123', //Password tidak di hashing
-        ]);
-
-        Karyawan::create([
-            'id_karyawan' => '0000000007',
-            'nama' => 'Kaesang Mulyono',
-            'role' => 'Kepala Toko',
-            'password' => '123', //Password tidak di hashing
-        ]);
-
-        Karyawan::create([
-            'id_karyawan' => '0000000008',
-            'nama' => 'Mulyono',
-            'role' => 'Kepala Toko',
-            'password' => '123', //Password tidak di hashing
-        ]);
-
-        Karyawan::create([
-            'id_karyawan' => '0000000009',
-            'nama' => 'Rasyid Anis',
-            'role' => 'Gudang Jakarta',
-            'password' => '123', //Password tidak di hashing
-        ]);
-
-        Karyawan::create([
-            'id_karyawan' => '0000000010',
-            'nama' => 'Prabowo Baswedan',
-            'role' => 'Gudang Jakarta',
-            'password' => '123', //Password tidak di hashing
-        ]);
-
-        Karyawan::create([
-            'id_karyawan' => '0000000011',
-            'nama' => 'Prabroro',
-            'role' => 'Gudang Bintan',
-            'password' => '123', //Password tidak di hashing
-        ]);
-
-        Karyawan::create([
-            'id_karyawan' => '0000000012',
-            'nama' => 'Prabroro Mulyono',
-            'role' => 'Gudang Bintan',
+            'id_karyawan' => '00000028',
+            'nama' => 'Trinanda',
+            'role' => 'IT Support',
             'password' => '123', //Password tidak di hashing
         ]);
 
