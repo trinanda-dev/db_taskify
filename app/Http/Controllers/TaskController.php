@@ -16,30 +16,41 @@ class TaskController extends Controller
         // Mendapatkan karyawan yang sedang login
         $karyawan = $request->user();
 
-        // Mendapatkan tanggal, bulan, dan minggu saat ini
-        $todayDate = Carbon::today()->format('d'); // Hanya tanggal
-        $todayMonth = Carbon::today()->format('m'); // Hanya bulan
-        $currentWeek = Carbon::now()->weekOfMonth; // Minggu dalam bulan
+        // Mendapatkan tanggal, bulan, hari, dan minggu saat ini
+        $todayDate = Carbon::today()->format('d'); // Hanya tanggal, misalnya "31"
+        $todayMonth = Carbon::today()->format('m'); // Hanya bulan, misalnya "10"
+        $todayDay = Carbon::now()->format('l'); // Nama hari saat ini, misalnya "Thursday"
+        $currentWeek = Carbon::now()->weekOfMonth; // Minggu dalam bulan, misalnya "5"
 
-        // Mengambil semua tugas berdasarkan role karyawan yang login
+        // Debugging untuk memastikan variabel tanggal sesuai dengan harapan
+        \Log::info("Tanggal Debug:", [
+            'todayDate' => $todayDate,
+            'todayMonth' => $todayMonth,
+            'todayDay' => $todayDay,
+            'currentWeek' => $currentWeek,
+        ]);
+
+        // Mengambil semua tugas berdasarkan role karyawan yang login, dan pastikan hanya tugas hari ini yang diambil
         $tasks = Task::where('role', $karyawan->role)
-                    ->where(function($query) use ($todayDate, $todayMonth, $currentWeek) {
-                        // Tugas Harian: Berdasarkan hari tertentu
-                        $query->where('day', Carbon::now()->format('l')); // Contoh: "Monday"
-
-                        // Tugas Pertanggal: Berdasarkan `show_on_dates`
-                        $query->orWhereJsonContains('show_on_dates', $todayDate);
-
-                        // Tugas dengan Bulan Tertentu: Berdasarkan `show_on_dates` dan `show_on_months`
-                        $query->orWhere(function($q) use ($todayDate, $todayMonth) {
-                            $q->whereJsonContains('show_on_dates', $todayDate)
-                            ->whereJsonContains('show_on_months', $todayMonth);
-                        });
-
-                        // Tugas pada Minggu Tertentu: Berdasarkan `show_on_weeks`
-                        $query->orWhereJsonContains('show_on_weeks', $currentWeek);
+            ->where(function($query) use ($todayDate, $todayMonth, $todayDay, $currentWeek) {
+                // Filter Tugas Harian berdasarkan hari ini
+                $query->where('day', $todayDay)
+                    // Atau filter Tugas Pertanggal yang sesuai dengan `show_on_dates`
+                    ->orWhereJsonContains('show_on_dates', $todayDate)
+                    // Atau filter Tugas yang sesuai dengan Bulan dan Tanggal tertentu
+                    ->orWhere(function($q) use ($todayDate, $todayMonth) {
+                        $q->whereJsonContains('show_on_dates', $todayDate)
+                        ->whereJsonContains('show_on_months', $todayMonth);
                     })
-                    ->get();
+                    // Atau filter Tugas berdasarkan minggu dalam bulan yang cocok dengan `show_on_weeks`
+                    ->orWhereJsonContains('show_on_weeks', $currentWeek);
+            })
+            ->get();
+
+        // Debugging untuk memastikan query mengembalikan data yang diharapkan
+        \Log::info("Tasks Query Result", [
+            'tasks' => $tasks->toArray(),
+        ]);
 
         // Iterasi setiap tugas untuk dimasukkan ke `task_assignments` jika belum ada
         foreach ($tasks as $task) {
@@ -55,11 +66,15 @@ class TaskController extends Controller
             }
         }
 
-        // Mengambil tugas-tugas yang telah diassign ke karyawan dari tabel TaskAssignment
+        // Mengambil tugas-tugas yang telah diassign ke karyawan dari tabel TaskAssignment, dengan filter hari ini
         $assignedTasks = TaskAssignment::where('id_karyawan', $karyawan->id_karyawan)
-                                    ->with('task') // Mengambil detail tugas dari Task
-                                    ->select('id', 'task_id', 'completed')
-                                    ->get();
+            ->whereHas('task', function ($query) use ($todayDate, $todayDay) {
+                $query->where('day', $todayDay)
+                    ->orWhereJsonContains('show_on_dates', $todayDate);
+            })
+            ->with('task') // Mengambil detail tugas dari Task
+            ->select('id', 'task_id', 'completed')
+            ->get();
 
         // Pisahkan tugas berdasarkan sumber
         $systemTask = $assignedTasks->where('task.from_system', true);
@@ -74,6 +89,7 @@ class TaskController extends Controller
             ]
         ], 200);
     }
+
 
 
     public function store(Request $request)
@@ -270,4 +286,45 @@ class TaskController extends Controller
 
         ], 200);
     }
+
+    public function getWeeklyTasks(Request $request, $id_karyawan)
+    {
+        // Validasi apakah karyawan dengan ID yang diberikan ada
+        $karyawan = Karyawan::where('id_karyawan', $id_karyawan)->first();
+        
+        if (!$karyawan) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Karyawan tidak ditemukan'
+            ], 404);
+        }
+
+        // Mendapatkan tanggal satu minggu yang lalu
+        $oneWeekAgo = Carbon::now()->subDays(7);
+
+        // Mengambil tugas-tugas yang diselesaikan oleh karyawan ini dalam seminggu terakhir
+        $tasks = TaskAssignment::where('id_karyawan', $id_karyawan)
+            ->where('updated_at', '>=', $oneWeekAgo) // Dalam rentang waktu satu minggu terakhir
+            ->with(['task' => function($query) {
+                $query->select('id', 'title', 'day'); // Mengambil judul dan hari tugas
+            }])
+            ->select('task_id', 'completed', 'updated_at') // Mengambil status dan tanggal selesai
+            ->get();
+
+        // Menyusun respons dengan data yang dibutuhkan
+        $result = $tasks->map(function ($taskAssignment) {
+            return [
+                'title' => $taskAssignment->task->title,
+                'status' => $taskAssignment->completed ? 'Selesai' : 'Tertunda',
+                'day' => $taskAssignment->task->day,
+                'completed_at' => $taskAssignment->updated_at->format('l, d M Y'), // Format tanggal
+            ];
+        });
+
+        return response()->json([
+            'status' => 'success',
+            'data' => $result
+        ], 200);
+    }
+
 }
