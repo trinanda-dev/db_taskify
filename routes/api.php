@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Route;
 Route::post('/login', [LoginController::class, 'login']); // Login user
 Route::post('/logout', [LoginController::class, 'logout'])->middleware('auth:sanctum'); // Logout user, dilindungi dengan middleware
 Route::post('/loginAdmin', [LoginController::class, 'loginAdmin']);
+// Get tugas setiap karyawan setiap minggu
+Route::get('/tasks/weekly', [TaskController::class, 'getWeeklyTasks']);
 
 // Semua route yang membutuhkan autentikasi dengan Sanctum
 Route::middleware('auth:sanctum')->group(function () {
@@ -29,6 +31,5 @@ Route::middleware('auth:sanctum')->group(function () {
     // Get dashboard data berdasarkan ID karyawan
     Route::get('/karyawan/{id}/dashboard', [TaskController::class, 'getDashboardKaryawanById']);
 
-    // Get tugas setiap karyawan setiap minggu
-    Route::get('/tasks/weekly/{id_karyawan}', [TaskController::class, 'getWeeklyTasks']);
+    
 });

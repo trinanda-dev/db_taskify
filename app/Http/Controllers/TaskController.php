@@ -287,33 +287,26 @@ class TaskController extends Controller
         ], 200);
     }
 
-    public function getWeeklyTasks(Request $request, $id_karyawan)
+    public function getWeeklyTasks(Request $request)
     {
-        // Validasi apakah karyawan dengan ID yang diberikan ada
-        $karyawan = Karyawan::where('id_karyawan', $id_karyawan)->first();
-        
-        if (!$karyawan) {
-            return response()->json([
-                'status' => 'error',
-                'message' => 'Karyawan tidak ditemukan'
-            ], 404);
-        }
-
         // Mendapatkan tanggal satu minggu yang lalu
         $oneWeekAgo = Carbon::now()->subDays(7);
 
-        // Mengambil tugas-tugas yang diselesaikan oleh karyawan ini dalam seminggu terakhir
-        $tasks = TaskAssignment::where('id_karyawan', $id_karyawan)
-            ->where('updated_at', '>=', $oneWeekAgo) // Dalam rentang waktu satu minggu terakhir
+        // Mengambil tugas-tugas yang diselesaikan oleh semua karyawan dalam seminggu terakhir
+        $tasks = TaskAssignment::where('updated_at', '>=', $oneWeekAgo)
             ->with(['task' => function($query) {
                 $query->select('id', 'title', 'day'); // Mengambil judul dan hari tugas
+            }, 'karyawan' => function($query) {
+                $query->select('id_karyawan', 'nama', 'role'); // Mengambil nama dan peran karyawan
             }])
-            ->select('task_id', 'completed', 'updated_at') // Mengambil status dan tanggal selesai
+            ->select('task_id', 'id_karyawan', 'completed', 'updated_at') // Mengambil status dan tanggal selesai
             ->get();
 
         // Menyusun respons dengan data yang dibutuhkan
         $result = $tasks->map(function ($taskAssignment) {
             return [
+                'nama' => $taskAssignment->karyawan->nama,
+                'role' => $taskAssignment->karyawan->role,
                 'title' => $taskAssignment->task->title,
                 'status' => $taskAssignment->completed ? 'Selesai' : 'Tertunda',
                 'day' => $taskAssignment->task->day,
@@ -326,5 +319,6 @@ class TaskController extends Controller
             'data' => $result
         ], 200);
     }
+
 
 }
