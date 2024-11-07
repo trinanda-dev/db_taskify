@@ -7,10 +7,11 @@ use App\Models\TaskAssignment;
 use App\Models\Karyawan;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Log;
+
 
 class TaskController extends Controller
 {
-    // Mendapatkan semua tugas untuk hari ini 
     public function index(Request $request) 
     {
         // Mendapatkan karyawan yang sedang login
@@ -24,7 +25,7 @@ class TaskController extends Controller
         $currentWeek = Carbon::now()->weekOfMonth; // Minggu dalam bulan, misalnya "5"
 
         // Debugging untuk memastikan variabel tanggal sesuai dengan harapan
-        \Log::info("Tanggal Debug:", [
+        Log::info("Tanggal Debug:", [
             'todayDate' => $todayDate,
             'todayMonth' => $todayMonth,
             'todayDay' => $todayDay,
@@ -32,7 +33,7 @@ class TaskController extends Controller
             'todayDateDay' => $todayDateDay,
         ]);
 
-        // Mengambil semua tugas berdasarkan role karyawan yang login, dan pastikan hanya tugas hari ini yang diambil
+        // Mengambil semua tugas berdasarkan role karyawan yang login, hanya tugas hari ini yang diambil
         $tasks = Task::where('role', $karyawan->role)
             ->where(function($query) use ($todayDate, $todayMonth, $todayDay, $todayDateDay, $currentWeek) {
                 // Pastikan untuk mengambil tugas berdasarkan `date` jika `date` sama dengan hari ini
@@ -43,30 +44,29 @@ class TaskController extends Controller
                         ->orWhereJsonContains('show_on_dates', $todayDate)
                         ->orWhere(function($inner) use ($todayDate, $todayMonth) {
                             $inner->whereJsonContains('show_on_dates', $todayDate)
-                                    ->whereJsonContains('show_on_months', $todayMonth);
+                                ->whereJsonContains('show_on_months', $todayMonth);
                         })
                         ->orWhereJsonContains('show_on_weeks', $currentWeek);
                     });
             })
+            ->whereDoesntHave('taskAssignments', function ($query) use ($karyawan) {
+                // Hanya ambil tugas yang belum ada di task_assignments untuk karyawan ini
+                $query->where('id_karyawan', $karyawan->id_karyawan);
+            })
             ->get();
 
         // Debugging untuk memastikan query mengembalikan data yang diharapkan
-        \Log::info("Tasks Query Result", [
+        Log::info("Tasks Query Result after filtering", [
             'tasks' => $tasks->toArray(),
         ]);
 
         // Iterasi setiap tugas untuk dimasukkan ke `task_assignments` jika belum ada
         foreach ($tasks as $task) {
-            $existingAssignment = TaskAssignment::where('task_id', $task->id)
-                                                ->where('id_karyawan', $karyawan->id_karyawan)
-                                                ->first();
-            if (!$existingAssignment) {
-                TaskAssignment::create([
-                    'task_id' => $task->id,
-                    'id_karyawan' => $karyawan->id_karyawan,
-                    'completed' => false, // Default belum selesai
-                ]);
-            }
+            TaskAssignment::create([
+                'task_id' => $task->id,
+                'id_karyawan' => $karyawan->id_karyawan,
+                'completed' => false, // Default belum selesai
+            ]);
         }
 
         // Mengambil tugas-tugas yang telah diassign ke karyawan dari tabel TaskAssignment, dengan filter hari ini
@@ -83,6 +83,7 @@ class TaskController extends Controller
         })
         ->with('task') // Mengambil detail tugas dari Task
         ->select('id', 'task_id', 'completed')
+        ->distinct()
         ->get();
 
         // Pisahkan tugas berdasarkan sumber
@@ -134,7 +135,7 @@ class TaskController extends Controller
             $validated['show_on_months'] = null;
         }
 
-        \Log::info("Validated Data Before Save:", $validated);
+        Log::info("Validated Data Before Save:", $validated);
 
         // Buat tugas baru di tabel `tasks`
         $task = Task::create($validated);
